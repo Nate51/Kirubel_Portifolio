@@ -34,7 +34,6 @@
 body
 {
     background: var(--body-color);
-
 }
 
 section
@@ -84,7 +83,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 5rem;
+    padding: 1.5rem 10rem;
 }
 
 .header .logo{
@@ -379,7 +378,6 @@ font-size: 1.7rem;
         opacity: 0;
     }
 }
-
 
 
 /* Home media*/
