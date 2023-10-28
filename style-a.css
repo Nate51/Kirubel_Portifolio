@@ -1,0 +1,73 @@
+#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+}
+#projects .title{
+    font-size: 4rem;
+}
+
+#projects .content{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-container{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    padding-bottom: 30px;
+}
+.project-container:hover{
+    background-color: rgba(255, 255, 255, 0.65);
+}
+.project-container .img-container{
+
+}
+.project-container img{
+    width: 400px; /* Set a fixed width for the container */
+    height: 250px; /* Set a fixed height for the container */
+    object-fit: cover; /* Crop the image to cover the container */
+    object-position: top right;
+}
+.project-container .link-button{
+    background-color: rgba(0, 0, 0, 0.82);
+    padding: 20px 25px;
+    position: absolute;
+    transform: translateX(330px) translateY(-30px);
+    color: white;
+}
+.project-container .link-button:hover {
+    background-color: rgb(0, 0, 0);
+
+}
+.project-container .hired-by-name{
+    font-size: 1.4rem ;
+}
+.project-container .project-information{
+    margin-top: 15px;
+    max-width: 400px;
+}
+.project-container .project-information .description{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #4f4e4e;
+}
+.project-container .other-links{
+    margin-top: 20px;
+}
+.other-links .logo{
+    color: rgba(0, 0, 0, 0.69);
+}
+.other-links .logo:hover{
+    color: rgb(0, 0, 0);
+}
+.other-links .logo::after{
+    content: " View";
+    font-size: 15px;
+    float: revert;
+}
