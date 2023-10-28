@@ -3,7 +3,6 @@ let underline = document.querySelectorAll(".underline-effect");
 // The underline effect for the navbar so when you click it, it stays on a single <a>
 underline.forEach(underLine=>{
     underLine.addEventListener('click', function (e){
-    e.preventDefault();
     underline.forEach(underLine =>{
         underLine.classList.remove('effect');
     });
