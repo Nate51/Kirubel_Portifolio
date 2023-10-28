@@ -10,6 +10,7 @@
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
+    margin-top: 100px;
 }
 #projects .content{
     margin-top: 5rem;
@@ -38,10 +39,11 @@
 }
 .project-container .link-button{
     background-color: rgba(0, 0, 0, 0.82);
-    padding: 20px 25px;
+    padding: 15px 18px;
     position: absolute;
     transform: translateX(330px) translateY(-30px);
     color: white;
+    font-size: 20px;
 }
 .project-container .link-button:hover {
     background-color: rgb(0, 0, 0);
@@ -73,10 +75,15 @@
     font-size: 15px;
     float: revert;
 }
+
+
+
+
 /*Contact section*/
 #contact-me{
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 }
 #contact-me .contact-container{
     display: flex;
@@ -101,14 +108,15 @@
 .form{
     padding: 200px 100px;
     background-color: #000000;
-    width: 50%;
+    width: 60%;
 }
 .form div{
     width: 100%;
 }
 .form h1{
     color: var(--contact-text-color);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
 }
 .form .info-input{
     display: flex;
@@ -116,7 +124,7 @@
 
 }
 .form .text-input{
-    padding: 15px 10px;
+    padding: 15px;
     border: rgba(255, 255, 255, 0.72) solid 1px;
     width: 100%;
     background-color: black;
@@ -125,11 +133,15 @@
 }
 .form label{
     position: absolute;
-    margin-top: -5px;
+    margin-top: -7px;
     margin-left: 10px;
     padding: 0 5px;
     color: var(--contact-text-color);
     background-color: #000000;
+    font-size: 1.3rem;
+}
+.text-input ~ .forName{
+    color: #ff6535;
 }
 .send-button button{
     padding: 16px 18px;
