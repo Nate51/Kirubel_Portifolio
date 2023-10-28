@@ -49,12 +49,36 @@ html {
 /*A default for btn */
 .btn
 {
-    padding: 1rem 2rem;
     color: var(--white-color);
     background: var(--black-color);
     font-size: 1.3rem;
-    border-radius: .4rem;
 }
+.geometric-box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+    rotate: -30deg;
+}
+/*this box does not rotate*/
+.geometricBox {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+}
+
+.geometric-box::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--black-color);
+    left: -5px;
+    top: -5px;
+}
+
+/*The nav and the header*/
 .header
 {
     display: flex;
@@ -72,7 +96,7 @@ html {
 .header nav a{
     position: relative;
     color: var(--black-color);
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 3rem;
     transition: all 0.4s ease;
 }
@@ -124,6 +148,17 @@ html {
     max-width: 550px;
     z-index: 10;
 }
+.home .curved-arrow{
+    position: absolute;
+    top:-7rem;
+    right: 4rem;
+    rotate: 80deg;
+}
+.home .random-lines{
+    position: absolute;
+    top: 4rem;
+    z-index: -10;
+}
 .home .home_shadow
 {
     position: absolute;
@@ -134,6 +169,9 @@ html {
     bottom: -0.95rem;
     right: -2rem;
     z-index: -1;
+}
+.home .content{
+    position: relative;
 }
 .home .content h1{
     font-size: 3rem;
@@ -200,26 +238,100 @@ html {
     align-items: center;
     justify-content: space-around;
 }
+            /*The about Image*/
 .about-image{
-padding: 2rem 9rem;
+    position: relative;
+    padding: 2rem 9rem;
 }
 .aboutImage{
     width: 100%;
-    min-width: 300px;
-    max-width: 550px;
-    z-index: 10;
+    min-width: 270px;
+    max-width: 420px;
+    z-index: 100;
+}
+.aboutImage img{
+    z-index: 100;
+}
+.aboutShadow{
+    position: absolute;
+    background: var(--white-color);
+    border-bottom: 3px solid var(--first-color);
+    width: 60%;
+    height: 110%;
+    top: -4rem;
+    right: 5rem;
+    z-index: -12;
+
 }
 .about .content{
     position: relative;
-    top: -12rem;
+    top: -1rem;
 }
+
 .about .content h1{
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 .about .content p{
     font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
+.about .content ul li{
+font-size: 1.7rem;
+}
+.about .content ul li span{
+    font-size:1.9rem;
+    font-weight: bold;
+}
+.about .random-lines{
+    position: absolute;
+    z-index: -11;
+    bottom:32rem;
+    right: 6rem;
+}
+
+.about .geometric-box{
+    top: 0;
+    right: 0;
+}
+.about-contact{
+    display: flex;
+    width: fit-content;
+    margin-top: 5rem;
+
+}
+.aboutContact{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    margin-right: 5rem;
+}
+.aboutContact:hover{
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.aboutContact i{
+    margin: 1rem;
+}
+.aboutContact p{
+    padding-right: 1rem;
+    position: relative;
+    top: 0.5rem;
+    text-align: center;
+}
+.about-contact a{
+    border: 2px solid var(--black-color);
+    padding: 0.2rem 1rem;
+    font-size: 3rem;
+    color: var(--black-color);
+    transition: border 0.2s ease;
+}
+.about-contact a:hover{
+    border-color:var(--first-color);
+}
+
 @keyframes scroll-down {
     0% {
         transform: translateY(-1rem);
@@ -235,7 +347,7 @@ padding: 2rem 9rem;
     }
 }
 /*Nav media for the navbar for smaller screens */
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 930px){
 
 #menu_btn{
     font-size: 2rem;
@@ -294,7 +406,8 @@ padding: 2rem 9rem;
         margin-bottom: 1.5rem;
     }
 }
-/* Media query for small screens (up to 768px) */
+/*Nav Media*/
+
 @media screen and (max-width: 768px) {
     .header {
         padding: 1rem 2rem; /* Adjust padding for smaller screens */
@@ -306,7 +419,6 @@ padding: 2rem 9rem;
     }
 }
 
-/* Media query for extra small screens (up to 576px) */
 @media screen and (max-width: 576px) {
     .header {
         padding: 1rem; /* Further reduce padding for smaller screens */
@@ -321,4 +433,41 @@ padding: 2rem 9rem;
     }
 }
 
+
+/*About media*/
+@media only screen and (max-width: 1000px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about .content {
+        margin-top: 5rem;
+        padding: 2rem;
+        text-align: left;
+    }
+
+    .about .content h1 {
+        font-size: 2rem; /* Adjust the font size */
+        margin-bottom: 1rem;
+    }
+
+    .about .content p {
+        font-size: 1.8rem; /* Adjust the font size */
+        line-height: 1.4; /* Adjust the line height */
+        margin-bottom: 1.8rem;
+    }
+
+    .about .random-lines {
+        bottom: 20rem;
+        right: 12rem;
+    }
+    .about .random-lines{
+        position: absolute;
+        z-index: -11;
+        bottom:32rem;
+        right: 6rem;
+    }
+
+}
 
