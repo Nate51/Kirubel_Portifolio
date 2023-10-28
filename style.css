@@ -140,6 +140,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 150px;
 }
 .home-image{
     position: relative;
