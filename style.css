@@ -1,5 +1,27 @@
+:root
+{
+    --first-color: hsl(14, 98%, 50%);
+    --black-color: hsl(0, 0%, 0%);
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Bai Jamjuree", sans-serif;
+    --biggest-font-size: 2.2rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+}
 *{
-    font-family:'Roboto', sans-serif;
+    font-family: 'Bai Jamjuree', sans-serif;
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -8,6 +30,11 @@
     text-decoration:none;
     text-transform:capitalize;
     transition: .2s linear;
+}
+body
+{
+    background: var(--body-color);
+
 }
 
 section
@@ -19,3 +46,279 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
+/*A default for btn */
+.btn
+{
+    padding: 1rem 2rem;
+    color: var(--white-color);
+    background: var(--black-color);
+    font-size: 1.3rem;
+    border-radius: .4rem;
+}
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+
+.header .logo{
+    font-size: 2.8rem;
+    color: var(--black-color);
+
+}
+
+.header nav a{
+    position: relative;
+    color: var(--black-color);
+    font-size: 2rem;
+    margin: 3rem;
+    transition: all 0.4s ease;
+}
+.underline-effect::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 0.209rem;
+    background: var(--black-color);
+    transition: 0.2s linear;
+}
+
+#menu_btn{
+    display: none;
+    color: var(--black-color);
+    cursor: pointer;
+}
+.underline-effect:hover::before {
+    width: 70%;
+}
+/*For the nav bar when you click it*/
+.effect::before{
+    width: 70%;
+}
+/*for screens less than 900px when you click the menu btn*/
+.navbar.active{
+    height: 28.125rem;
+    opacity: 1;
+}
+.navbar.active a{
+    opacity: 1;
+}
+
+/*                    Home                             */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.home-image{
+    position: relative;
+    margin-left: 2rem;
+}
+.home .home-image .kirubelImage{
+    width: 100%;
+    min-width: 170px;
+    max-width: 550px;
+    z-index: 10;
+}
+.home .home_shadow
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--container-color);
+    border: 4px solid var(--black-color);
+    bottom: -0.95rem;
+    right: -2rem;
+    z-index: -1;
+}
+.home .content h1{
+    font-size: 3rem;
+}
+.home .content h2{
+    font-size: 2rem;
+    margin-bottom: 2.2rem;
+}
+.invert{
+    filter: invert(1);
+}
+/*Scroll Down*/
+.home_scroll{
+    position: absolute;
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+}
+.home_scrollBox{
+    display: flex;
+    align-items: center;
+    background: var(--black-color);
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: all 0.4s;
+    color: var(--white-color);
+
+}
+.home_scrollBox i {
+    animation: scroll-down 2s infinite;
+}
+.scrollDown_text{
+    color: var(--black-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.home_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home_logo .logo{
+    font-size: 2.5rem;
+    color: var(--body-color);
+    padding: .5rem;
+    background: var(--black-color-light);
+    margin-left: 5.7rem;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+.home_logo .logo:hover{
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+/*                About me Section                   */
+
+.about
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-image{
+padding: 2rem 9rem;
+}
+.aboutImage{
+    width: 100%;
+    min-width: 300px;
+    max-width: 550px;
+    z-index: 10;
+}
+.about .content{
+    position: relative;
+    top: -12rem;
+}
+.about .content h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.about .content p{
+    font-size: 1.8rem;
+}
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1; /* Set opacity to 0 at 50% keyframe */
+    }
+    100% {
+        transform: translateY(.6rem);
+        opacity: 0;
+    }
+}
+/*Nav media for the navbar for smaller screens */
+@media only screen and (max-width: 900px){
+
+#menu_btn{
+    font-size: 2rem;
+    display: block;
+    margin-left: 24rem;
+}
+
+    .navbar{
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        background: var(--container-color);
+        width: 100vw;
+        transition: 0.5s;
+        overflow: hidden;
+        height:0;
+        padding: 4rem;
+        opacity: 0;
+        z-index: 1000;
+    }
+    .navbar a{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        font-size: 3rem;
+        opacity: 0;
+    }
+}
+
+
+
+/* Home media*/
+/* Media query for small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .home .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home .content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+}
+
+/* Media query for extra small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .home .content h1 {
+        font-size: 2rem;
+    }
+
+    .home .content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+/* Media query for small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem 2rem; /* Adjust padding for smaller screens */
+        justify-content: center; /* Center the items */
+    }
+
+    .header nav a {
+        margin: 1rem; /* Reduce margin between links */
+    }
+}
+
+/* Media query for extra small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 1rem; /* Further reduce padding for smaller screens */
+    }
+
+    .header .logo {
+        font-size: 1.85rem; /* Decrease font size for logo */
+    }
+
+    .header nav a {
+        margin: 0.5rem; /* Reduce margin even further between links */
+    }
+}
+
+
