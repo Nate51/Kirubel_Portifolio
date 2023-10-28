@@ -34,7 +34,6 @@
 body
 {
     background: var(--body-color);
-
 }
 
 section
@@ -267,7 +266,6 @@ padding: 2rem 9rem;
         opacity: 0;
     }
 }
-
 
 
 /* Home media*/
