@@ -83,7 +83,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background: var(--body-color);
     padding: 1.5rem 10rem;
+    z-index: 10000;
 }
 
 .header .logo{
@@ -136,6 +140,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 150px;
 }
 .home-image{
     position: relative;
@@ -331,6 +336,122 @@ font-size: 1.7rem;
     border-color:var(--first-color);
 }
 
+
+/*Pricing  section*/
+.pricing-headerText{
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 5.5rem;
+}
+.priceTime{
+    display: flex;
+    width: fit-content;
+    color: white;
+    margin: 0 auto 5rem auto;
+    padding: 0.5rem 0.3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background: var(--black-color);
+    transition: all 0.4s ease;
+}
+.priceTime span{
+    background: var(--black-color);
+    padding:2rem 1.6rem;
+    border-radius: 1.6rem;
+    font-size: 1.7rem;
+}
+.priceTime span.active{
+    background: var(--white-color);
+    color:var(--black-color);
+    padding: 2rem 1.8rem;
+    display: inline;
+    border-radius: 1.6rem;
+    font-size: 1.7rem;
+}
+.pricing .pricing-row{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-gap:2rem ;
+}
+.pricing-col{
+    padding: 6rem 0 6rem 1.6rem; /* Adjust padding for smaller screens */
+    border: 2px solid var(--black-color);
+    background: var(--white-color);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.pricing-col:hover{
+    transform: translateY(-7px);
+    background: var(--container-color);
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 1);
+}
+.pricing-col h1
+{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3.4rem;
+}
+.pricing-col span{
+    display: inline;
+    font-weight: 300;
+}
+.pricing-col h3{
+    text-align: center;
+    margin-bottom: 1.6rem;
+    font-size: 1.9rem;
+
+}
+.pricing-col:hover h3{
+    color: var(--first-color);
+
+}
+
+.pricing-col p{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    transition: all 0.1s ease;
+
+}
+.pricing-col p i {
+    color: green;
+    margin-right: 0.4rem;
+}
+
+
+
+/*=====================================Footer=========================================*/
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 1.5rem;
+    background: var(--black-color);
+}
+.footer p{
+    color: var(--black-color-light);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.footer p span
+{
+    color: var(--white-color);
+}
+.footer a{
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    color: var(--white-color);
+    transition: all 0.2s ease;
+}
+.footer a:hover{
+    color: var(--black-color-light);
+}
+
+
+
+/*Keyframe for the down button*/
 @keyframes scroll-down {
     0% {
         transform: translateY(-1rem);
@@ -345,6 +466,8 @@ font-size: 1.7rem;
         opacity: 0;
     }
 }
+
+
 /*Nav media for the navbar for smaller screens */
 @media only screen and (max-width: 930px){
 
@@ -378,6 +501,7 @@ font-size: 1.7rem;
         opacity: 0;
     }
 }
+
 
 
 /* Home media*/
@@ -468,4 +592,19 @@ font-size: 1.7rem;
     }
 
 }
+/*@media for the pricing section*/
+@media only screen and (max-width: 768px) {
+    .pricing .pricing-text span {
+        font-size: 1.5rem;
+    }
 
+    .pricing .pricing-col h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-col h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,14 +1,17 @@
+:root{
+    --contact-text-color: hsl(0, 2%, 89%);
+}
+.section-title{
+    font-size: 4rem;
+}
 #projects{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
+    margin-top: 100px;
 }
-#projects .project-title{
-    font-size: 4rem;
-}
-
 #projects .content{
     margin-top: 5rem;
     display: flex;
@@ -29,17 +32,18 @@
 
 }
 .project-container img{
-    width: 400px; /* Set a fixed width for the container */
-    height: 250px; /* Set a fixed height for the container */
-    object-fit: cover; /* Crop the image to cover the container */
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
     object-position: top right;
 }
 .project-container .link-button{
     background-color: rgba(0, 0, 0, 0.82);
-    padding: 20px 25px;
+    padding: 15px 18px;
     position: absolute;
     transform: translateX(330px) translateY(-30px);
     color: white;
+    font-size: 20px;
 }
 .project-container .link-button:hover {
     background-color: rgb(0, 0, 0);
@@ -70,4 +74,77 @@
     content: " View";
     font-size: 15px;
     float: revert;
+}
+
+
+
+
+/*Contact section*/
+#contact-me{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+#contact-me .contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+#contact-me .section-title{
+    transform: translateX(-90px);
+}
+.form-info{
+    transform: translateX(30px);
+    padding: 60px 50px;
+    background: linear-gradient(to bottom, rgb(206, 205, 205) 98%, #ff6535 98% );
+}
+#contact-me .form-info p{
+    margin-top: 30px;
+    font-size: 15px;
+    max-width: 300px;
+}
+.form{
+    padding: 200px 100px;
+    background-color: #000000;
+    width: 60%;
+}
+.form div{
+    width: 100%;
+}
+.form h1{
+    color: var(--contact-text-color);
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+.form .info-input{
+    display: flex;
+    gap: 20px;
+
+}
+.form .text-input{
+    padding: 15px;
+    border: rgba(255, 255, 255, 0.72) solid 1px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+.form label{
+    position: absolute;
+    margin-top: -7px;
+    margin-left: 10px;
+    padding: 0 5px;
+    color: var(--contact-text-color);
+    background-color: #000000;
+    font-size: 1.3rem;
+}
+.text-input ~ .forName{
+    color: #ff6535;
+}
+.send-button button{
+    padding: 16px 18px;
+    background-color: #ff6535;
+    color: var(--contact-text-color);
 }
