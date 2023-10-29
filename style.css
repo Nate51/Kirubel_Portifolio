@@ -178,7 +178,8 @@ html {
     position: relative;
 }
 .home .content h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
 }
 .home .content h2{
     font-size: 2rem;
@@ -198,8 +199,8 @@ html {
     display: flex;
     align-items: center;
     background: var(--black-color);
-    padding: 1rem 1.8rem;
-    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    font-size: 3rem;
     overflow: hidden;
     transition: all 0.4s;
     color: var(--white-color);
@@ -241,6 +242,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 50px;
 }
             /*The about Image*/
 .about-image{
@@ -469,7 +471,7 @@ font-size: 1.7rem;
 
 
 /*Nav media for the navbar for smaller screens */
-@media only screen and (max-width: 930px){
+@media only screen and (max-width: 1020px){
 
 #menu_btn{
     font-size: 2rem;
@@ -515,6 +517,7 @@ font-size: 1.7rem;
         font-size: 1.8rem;
         margin-bottom: 1.8rem;
     }
+
 }
 
 /* Media query for extra small screens (up to 576px) */
