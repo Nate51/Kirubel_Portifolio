@@ -193,8 +193,8 @@
         flex-direction: column;
     }
     #contact-me .form-info p{
-        font-size: 2rem;
-        max-width: 450px;
+        font-size: 1.6rem;
+        max-width: 500px;
     }
     .form-info{
         transform: translateY(80px);
@@ -224,9 +224,9 @@
     .form label{
         margin-top: -12px;
         margin-left: 25px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .send-button button{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
