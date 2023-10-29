@@ -28,9 +28,6 @@
 .project-container:hover{
     background-color: rgba(255, 255, 255, 0.65);
 }
-.project-container .img-container{
-
-}
 .project-container img{
     width: 400px;
     height: 250px;
@@ -169,6 +166,10 @@
     }
     .project-container .hired-by-name{
         font-size: 2.4rem ;
+    }
+    .project-container .project-information{
+        margin-top: 15px;
+        max-width: 600px;
     }
     .project-container .project-information .description{
         font-size: 2.5rem;
