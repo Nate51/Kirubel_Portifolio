@@ -85,6 +85,11 @@ html {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 5rem;
+    position: fixed;
+    width: 100%;
+    background: var(--white-color);
+    z-index: 150;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
 }
 
 .header .logo{
@@ -331,7 +336,121 @@ font-size: 1.7rem;
 .about-contact a:hover{
     border-color:var(--first-color);
 }
+/*                                   Pricing                          */
+.pricing{
+    display: flex;
+    flex-direction: column;
+}
+.pricing .pricing-text{
+    width: fit-content;
+    background: var(--black-color);
+    border-radius: 2rem;
+    padding: 1.5rem .2rem;
+    border: none;
+    margin: 2rem auto 8rem auto;
+    transition: all 0.2s ease;
 
+}
+.pricing-headerText{
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 5.5rem;
+}
+.pricing-text span {
+    font-size: 1.8rem;
+    color: white;
+    padding: 1.3rem 1.6rem;
+    border-radius: 1.8rem;
+    cursor: pointer;
+
+}
+.pricing-text span.active {
+    background: white; /* Change to the desired background color */
+    color: black; /* Change to the desired text color */
+}
+.pricing .pricing-row{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    grid-gap:2rem ;
+}
+.pricing-col{
+    padding: 6rem 0 6rem 1.6rem; /* Adjust padding for smaller screens */
+    border: 2px solid var(--black-color);
+    background: var(--white-color);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.pricing-col:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);;
+    background: var(--container-color);
+}
+.pricing-col:hover h3 {
+    color: var(--first-color);
+}
+
+.pricing-col h1
+{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3.4rem;
+}
+.pricing-col span{
+    display: inline;
+    font-weight: 300;
+}
+.pricing-col h3{
+    text-align: center;
+    margin-bottom: 1.6rem;
+    font-size: 1.8rem;
+}
+
+.pricing-col p{
+    font-size: 1.6rem; /* Decrease font size for smaller screens */
+    margin: 1rem 0; /* Adjust margin for smaller screens */
+    max-height: 4.8rem; /* Set a max height to handle overflowing content */
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+.pricing-col p:hover{
+    color: var(--first-color);
+}
+.pricing-col p:hover i {
+    color: var(--black-color);
+    background: var(--white-color);
+    font-weight: bold;
+}
+/*Footer*/
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem 2rem;
+    background: var(--black-color);
+}
+.footer p{
+    font-size: 1.5rem;
+    color: var(--black-color-light);
+    cursor: pointer;
+}
+.footer .social-icons a{
+    margin: 2rem;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    transition: all 0.2s ease;
+}
+.footer .social-icons a:hover {
+    color: var(--black-color-light);
+}
+.footer p span{
+    color: var(--white-color);
+}
+
+
+/*Animation for the home down scroll*/
 @keyframes scroll-down {
     0% {
         transform: translateY(-1rem);
@@ -346,8 +465,8 @@ font-size: 1.7rem;
         opacity: 0;
     }
 }
-/*Nav media for the navbar for smaller screens */
-@media only screen and (max-width: 930px){
+/*Nav media  the navbar */
+@media only screen and (max-width: 980px){
 
 #menu_btn{
     font-size: 2rem;
@@ -393,6 +512,9 @@ font-size: 1.7rem;
         font-size: 1.8rem;
         margin-bottom: 1.8rem;
     }
+    .home .content img{
+        display: none;
+    }
 }
 
 /* Media query for extra small screens (up to 576px) */
@@ -404,6 +526,9 @@ font-size: 1.7rem;
     .home .content h2 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
+    }
+    .home .content img{
+        display: none;
     }
 }
 /*Nav Media*/
@@ -448,14 +573,15 @@ font-size: 1.7rem;
     }
 
     .about .content h1 {
-        font-size: 2rem; /* Adjust the font size */
+        font-size: 1.7rem; /* Adjust the font size */
         margin-bottom: 1rem;
     }
 
     .about .content p {
-        font-size: 1.8rem; /* Adjust the font size */
+        font-size: 1.6rem; /* Adjust the font size */
         line-height: 1.4; /* Adjust the line height */
         margin-bottom: 1.8rem;
+        padding-right: 2rem;
     }
 
     .about .random-lines {
@@ -471,3 +597,20 @@ font-size: 1.7rem;
 
 }
 
+/*Price @media */
+/* Define responsive font sizes using media queries */
+@media only screen and (max-width: 768px) {
+    .pricing .pricing-text span {
+        font-size: 1.5rem;
+    }
+
+    .pricing .pricing-col h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .pricing-col h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
