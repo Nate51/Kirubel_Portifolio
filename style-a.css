@@ -28,9 +28,6 @@
 .project-container:hover{
     background-color: rgba(255, 255, 255, 0.65);
 }
-.project-container .img-container{
-
-}
 .project-container img{
     width: 400px;
     height: 250px;
@@ -72,7 +69,7 @@
 }
 .other-links .logo::after{
     content: " View";
-    font-size: 15px;
+    font-size: 1.5rem;
     float: revert;
 }
 
@@ -103,7 +100,7 @@
 }
 #contact-me .form-info p{
     margin-top: 30px;
-    font-size: 15px;
+    font-size: 1.5rem;
     max-width: 300px;
 }
 .form{
@@ -149,21 +146,55 @@
 .send-button button:hover{
     background-color: #ff3523;
 }
+
+
+
 @media screen and (max-width: 1020px) {
+    .section-title{
+        font-size: 6rem;
+    }
     .project-container img{
-        width: 500px;
+        width: 600px;
         height: 300px;
 
     }
     .project-container .link-button{
-        transform: translateX(400px) translateY(-30px);
+        transform: translateX(500px) translateY(-30px);
+    }
+    .project-container .title{
+        font-size: 3rem;
+    }
+    .project-container .hired-by-name{
+        font-size: 2.4rem ;
+    }
+    .project-container .project-information{
+        margin-top: 15px;
+        max-width: 600px;
+    }
+    .project-container .project-information .description{
+        font-size: 2.5rem;
+    }
+    .project-container .other-links{
+        margin-top: 20px;
+        font-size: 2.5rem;
+    }
+    .other-links .logo::after{
+        font-size: 2rem;
     }
 
+    #contact-me .section-title{
+        transform: translateX(-90px);
+        width: 350px;
+    }
     #contact-me .contact-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    #contact-me .form-info p{
+        font-size: 1.6rem;
+        max-width: 500px;
     }
     .form-info{
         transform: translateY(80px);
@@ -173,5 +204,29 @@
         padding: 200px 100px;
         background-color: #000000;
         width: 100%;
+    }
+    .form h1{
+        font-size: 3rem;
+    }
+    .form .info-input{
+        flex-direction: column;
+        gap: 0;
+    }
+    .form .text-input{
+        padding: 15px;
+        border: rgba(255, 255, 255, 0.72) solid 1px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        margin-bottom: 20px;
+        font-size: 2.3rem;
+    }
+    .form label{
+        margin-top: -12px;
+        margin-left: 25px;
+        font-size: 1.8rem;
+    }
+    .send-button button{
+        font-size: 1.7rem;
     }
 }
