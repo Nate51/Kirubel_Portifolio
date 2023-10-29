@@ -28,9 +28,6 @@
 .project-container:hover{
     background-color: rgba(255, 255, 255, 0.65);
 }
-.project-container .img-container{
-
-}
 .project-container img{
     width: 400px;
     height: 250px;
@@ -170,6 +167,10 @@
     .project-container .hired-by-name{
         font-size: 2.4rem ;
     }
+    .project-container .project-information{
+        margin-top: 15px;
+        max-width: 600px;
+    }
     .project-container .project-information .description{
         font-size: 2.5rem;
     }
@@ -192,8 +193,8 @@
         flex-direction: column;
     }
     #contact-me .form-info p{
-        font-size: 2rem;
-        max-width: 450px;
+        font-size: 1.6rem;
+        max-width: 500px;
     }
     .form-info{
         transform: translateY(80px);
@@ -223,9 +224,9 @@
     .form label{
         margin-top: -12px;
         margin-left: 25px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .send-button button{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
