@@ -83,7 +83,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 5rem;
+    position: fixed;
+    width: 100%;
+    background: var(--body-color);
+    padding: 1.5rem 10rem;
+    z-index: 10000;
 }
 
 .header .logo{
@@ -136,6 +140,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 150px;
 }
 .home-image{
     position: relative;
