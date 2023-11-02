@@ -34,10 +34,12 @@ html {
     overflow-x: hidden;
 }
 /*A default for btn */
-.btn
+.btnn
 {
     color: var(--white-color);
     background: var(--black-color);
+    font-size: 1.3rem;
+
 }
 .geometric-box {
     position: absolute;
