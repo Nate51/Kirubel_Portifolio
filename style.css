@@ -4,10 +4,16 @@
     --black-color: hsl(0, 0%, 0%);
     --black-color-light: hsl(0, 0%, 40%);
     --white-color: hsl(0, 0%, 95%);
-    --title-color: hsl(0, 0%, 0%);
-    --text-color: hsl(0, 0%, 35%);
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsl(0, 0%, 83%);
+    --medium-text: 1.8rem;
+    --small-text: 1.5rem;
+    --heading1-text:3.4rem;
+    --heading2-text:2.7rem;
+    --body-text:2.7rem;
+    --heading3-text: 2.1rem;
+    --title-text: 5.5rem;
+
 }
 *{
     font-family: 'Bai Jamjuree', sans-serif;
@@ -34,7 +40,7 @@ html {
     overflow-x: hidden;
 }
 /*A default for btn */
-.btnn
+.btn
 {
     color: var(--white-color);
     background: var(--black-color);
@@ -80,7 +86,7 @@ html {
 }
 
 .header .logo{
-    font-size: 3.7rem;
+    font-size: var(--heading1-text);
     color: var(--black-color);
 
 }
@@ -88,7 +94,7 @@ html {
 .header nav a{
     position: relative;
     color: var(--black-color);
-    font-size: 3.3rem;
+    font-size: var(--medium-text);
     margin: 3rem;
     transition: all 0.4s ease;
 }
@@ -127,17 +133,19 @@ html {
 /*                    Home                             */
 .home{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 150px;
-    margin-bottom: 15rem;
-    gap: 6rem;
+    margin-bottom: 5rem;
+    gap: 2rem 6rem;
 
 }
+
 .home-image{
     position: relative;
-    order:1;
+    margin: 1.5rem;
 }
 .home .home-image .kirubelImage{
     width: 100%;
@@ -145,14 +153,7 @@ html {
     max-width: 395px;
     z-index: 10;
 }
-.home .curved-arrow{
-    /*font-size: 2rem;*/
-    display: none;
-    position: absolute;
-    top: -5rem;
-    right: 1rem;
-    rotate: 80deg;
-}
+
 .home .home_shadow
 {
     position: absolute;
@@ -164,17 +165,18 @@ html {
     right: -2rem;
     z-index: -1;
 }
+.home_name{
+    order: -1;
+    font-size: var(--heading1-text);
+    font-weight: bolder;
+}
 .home .content{
     position: relative;
 }
-.home .content h1{
-    font-size: 4.3rem;
-    margin-bottom: 1rem;
-    font-weight: bolder;
-}
+
 .home .content h2{
     position: relative;
-    font-size: 2.7rem;
+    font-size: var(--heading2-text);
     margin-bottom: 2.9rem;
     padding-right: .3rem;
     word-spacing: 2.7px;
@@ -194,7 +196,7 @@ html {
     align-items: center;
     background: var(--black-color);
     padding: 0.5rem 1.4rem;
-    font-size: 3rem;
+    font-size: var(--heading1-text);
     overflow: hidden;
     transition: all 0.4s;
     color: var(--white-color);
@@ -202,11 +204,11 @@ html {
 }
 .home_scrollBox i {
     animation: scroll-down 2s infinite;
-    font-size: 3.3rem;
+    font-size: var(--heading2-text);
 }
 .scrollDown_text{
     color: var(--black-color);
-    font-size: 3.8rem;
+    font-size: var(--heading2-text);
     font-weight: bold;
     margin-top: .5rem;
     margin-left: 1rem;
@@ -220,7 +222,7 @@ html {
     align-items: center;
 }
 .home_logo .logo{
-    font-size: 5rem;
+    font-size: var(--heading1-text);
     color: var(--body-color);
     padding: .5rem;
     background: var(--black-color-light);
@@ -242,7 +244,7 @@ html {
     align-items: center;
     justify-content: space-around;
     margin-top: 50px;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
             /*The about Image*/
 .about-image{
@@ -276,12 +278,12 @@ html {
 }
 
 .aboutMeTitle h1{
-    font-size: 6.3rem;
+    font-size: var(--title-text);
     margin-bottom: 13rem;
     text-align: center;
 }
 .about .content p{
-    font-size: 3.5rem;
+    font-size: var(--body-text);
     font-weight: bold;
     word-spacing: 2.8px;
     margin-bottom: 2rem;
@@ -290,12 +292,12 @@ html {
     list-style-type:none ;
 }
 .about .content ul li{
- font-size: 3.5rem;
+ font-size: var(--small-text);
  padding: 0 .1rem;
 }
 
 .about .content ul li span{
-    font-size:4.5rem;
+    font-size:var(--body-text);
     font-weight: bold;
 }
 .about .random-lines{
@@ -329,10 +331,10 @@ html {
 }
 .aboutContact i{
     margin: .8rem;
-    font-size:4rem;
+    font-size:var(--body-text);
 }
 .aboutContact p{
-    font-size: 5rem;
+    font-size: var(--medium-text);
     padding-right: 1rem;
     position: relative;
     top: 0.5rem;
@@ -346,14 +348,16 @@ html {
     transition: border 0.2s ease;
 }
 .about-contact a:hover{
-    border-color:var(--first-color);
+    border-color:#72b2d4;
 }
-
+.about-telegram i{
+    color: #72b2d4;
+}
 
 /*================================Pricing  section========================================*/
 .pricing-headerText{
     text-align: center;
-    font-size: 3.6rem;
+    font-size: var(--heading1-text);
     margin-bottom: 5.5rem;
 }
 .pricing-col .see-more{
@@ -363,7 +367,7 @@ html {
     background: var(--black-color);
     text-align: center;
     width: 50%;
-    font-size: 4rem;
+    font-size: var(--heading1-text);
     transition: all 0.2s ease;
 }
 .pricing-col .see-more:hover
@@ -380,13 +384,6 @@ html {
 .bottom-price{
     margin-bottom: 2rem;
 }
-/*.pricing-col span.active{*/
-/*    background: var(--white-color);*/
-/*    color:var(--black-color);*/
-/*    padding: 2rem 1.8rem;*/
-/*    display: inline;*/
-/*    font-size: 1.7rem;*/
-/*}*/
 .pricing .pricing-row{
     width: 95%;
     margin: auto;
@@ -420,7 +417,7 @@ html {
 }
 
 .pricing-col p{
-    font-size: 2.5rem;
+    font-size: var(--body-text);
     margin: 2rem 0;
     transition: all 0.1s ease;
     line-height: 2rem;
@@ -444,7 +441,7 @@ html {
 }
 .footer p{
     color: var(--black-color-light);
-    font-size: 2.4rem;
+    font-size: var(--medium-text);
     cursor: pointer;
 
 }
@@ -453,7 +450,7 @@ html {
     color: var(--white-color);
 }
 .footer a{
-    font-size: 2.6rem;
+    font-size: var(--body-text);
     margin: 1.5rem;
     color: var(--white-color);
     transition: all 0.2s ease;
@@ -467,7 +464,7 @@ html {
 }
 .footer_scroll i {
     animation: scroll-down 2s infinite;
-    font-size: 2rem;
+    font-size: var(--heading3-text);
 }
 
 
@@ -490,6 +487,8 @@ html {
 
 
 /*Nav media for the navbar for smaller screens */
+
+
 @media only screen and (max-width: 1020px){
 
 #menu_btn{
@@ -522,7 +521,16 @@ html {
         opacity: 0;
     }
 }
-
+@media only scrren and (max-width:768px){
+    html {
+        font-size: 14px;
+    }
+}
+@media only scrren and (max-width:480px){
+    html {
+        font-size: 12px;
+    }
+}
 @media only screen and (min-width: 1000px){
 
     .header .logo{
@@ -534,13 +542,22 @@ html {
     }
 /*============================Home @media====================================================  */
 .home{
+    position: relative;
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
 
 }
-
+.home .home_name{
+    position: absolute;
+    top: 19rem;
+}
+.home .home-image
+{
+    order: 1;
+}
     .home .home-image .kirubelImage{
         min-width: 300px;
     }

@@ -10,33 +10,28 @@ underline.forEach(underLine=>{
     });
 });
 
-//
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+    const scrollY = window.scrollY + 110; //the distance of how long the window moved
+
+    sections.forEach((section,index) =>{
+        const sectionTop = section.offsetTop;
+        // the distance between the top of the section to the top of the parent(body in this instance)
+        if(scrollY>=sectionTop){
+            underline.forEach(underLine=>{
+                underLine.classList.remove('effect');
+            });
+            underline[index].classList.add('effect');
+        }
+    });
+});
+
+
+
+//for screens less than 768px for the navbar to be active when clicked on the menu btn
 header3=document.getElementById("menu_btn");
 header3.onclick = function(){
     navBar=document.querySelector(".navbar");
     navBar.classList.toggle("active");
 }
 
-// For the pricing to change colors
-// const yearlySpan = document.getElementById('yearly');
-// const quarterlySpan = document.getElementById('quarterly');
-// const goldChange = document.querySelector(".gold-change");
-// const silverChange = document.querySelector(".silver-change");
-// const bronzeChange = document.querySelector(".bronze-price");
-
-// yearlySpan.addEventListener('click', function() {
-//     yearlySpan.classList.add('active');
-//     quarterlySpan.classList.remove('active');
-//
-//     goldChange.innerHTML = "60,000 ETB/Year";
-//     silverChange.innerHTML = "40,000 ETB/Year";
-//     bronzeChange.innerHTML = "20,000 ETB/Year";
-//
-// });
-// quarterlySpan.addEventListener('click', function() {
-//     quarterlySpan.classList.add('active');
-//     yearlySpan.classList.remove('active');
-//     goldChange.innerHTML = "20,000 ETB/Quarter";
-//     silverChange.innerHTML = "12,000 ETB/Quarter";
-//     bronzeChange.innerHTML = "8,000 ETB/Quarter";
-// });
