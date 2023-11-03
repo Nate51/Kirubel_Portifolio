@@ -13,6 +13,13 @@
     --body-text:2rem;
     --heading3-text: 2.1rem;
     --title-text: 5.5rem;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.8rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.8rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: 1.3rem;
+    --smaller-font-size: 1.2rem;
 
 }
 *{
@@ -24,6 +31,10 @@
     border:none;
     text-decoration:none;
     transition: .2s linear;
+}
+html {
+    font-size: 10px;
+    overflow-x: hidden;
 }
 body
 {
@@ -47,6 +58,7 @@ html {
     font-size: 9px;
     overflow-x: hidden;
 }
+
 /*A default for btn */
 .btn
 {
@@ -97,7 +109,7 @@ html {
 }
 
 .header .logo{
-    font-size: var(--heading1-text);
+    font-size: var(--h1-font-size);
     color: var(--black-color);
 
 }
@@ -105,7 +117,7 @@ html {
 .header nav a{
     position: relative;
     color: var(--black-color);
-    font-size: var(--medium-text);
+    font-size: var(--h2-font-size);
     margin: 3rem;
     transition: all 0.4s ease;
 }
@@ -134,7 +146,7 @@ html {
 }
 /*for screens less than 900px when you click the menu btn*/
 .navbar.active{
-    height: 41rem;
+    height: 42rem;
     opacity: 1;
 }
 .navbar.active a{
@@ -146,7 +158,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 150px;
     margin-bottom: 5rem;
@@ -179,16 +190,14 @@ html {
 }
 .home_name{
     order: -1;
-    font-size: var(--heading1-text);
-    font-weight: bolder;
+    font-size: var(--h1-font-size);
+    font-weight: bold;
 }
-.home .content{
-    position: relative;
-}
+
 
 .home .content h2{
     position: relative;
-    font-size: var(--heading2-text);
+    font-size: var(--h2-font-size);
     margin-bottom: 2.9rem;
     padding-right: .3rem;
     word-spacing: 2.7px;
@@ -208,7 +217,7 @@ html {
     align-items: center;
     background: var(--black-color);
     padding: 0.5rem 1.4rem;
-    font-size: var(--heading1-text);
+    font-size: var(--h1-font-size);
     overflow: hidden;
     transition: all 0.4s;
     color: var(--white-color);
@@ -216,25 +225,32 @@ html {
 }
 .home_scrollBox i {
     animation: scroll-down 2s infinite;
-    font-size: var(--heading2-text);
+    font-size: var(--h2-font-size);
 }
 .scrollDown_text{
     color: var(--black-color);
-    font-size: var(--heading2-text);
+    font-size: var(--h2-font-size);
     font-weight: bold;
     margin-top: .5rem;
     margin-left: 1rem;
 }
+.home-image-logo{
+    display: flex;
+    align-items: center;
+
+}
+.home-image-shadow-box{
+    position: relative;
+}
 .home_logo {
-    position: absolute;
-    left: -13rem;
-    top: 13rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    order: -1;
+    margin-right: 3rem;
 }
 .home_logo .logo{
-    font-size: var(--heading1-text);
+    font-size: var(--h1-font-size);
     color: var(--body-color);
     padding: .5rem;
     background: var(--black-color-light);
@@ -291,12 +307,12 @@ html {
 }
 
 .aboutMeTitle h1{
-    font-size: var(--title-text);
+    font-size: var(--biggest-font-size);
     margin-bottom: 13rem;
     text-align: center;
 }
 .about .content p{
-    font-size: var(--body-text);
+    font-size: var(--normal-font-size);
     font-weight: bold;
     word-spacing: 2.8px;
     margin-bottom: 2rem;
@@ -305,12 +321,12 @@ html {
     list-style-type:none ;
 }
 .about .content ul li{
- font-size: var(--small-text);
+ font-size: var(--small-font-size);
  padding: 0 .1rem;
 }
 
 .about .content ul li span{
-    font-size:var(--body-text);
+    font-size:var(--normal-font-size);
     font-weight: bold;
 }
 .about .random-lines{
@@ -344,7 +360,7 @@ html {
 }
 .aboutContact i{
     margin: .8rem;
-    font-size:var(--body-text);
+    font-size:var(--normal-font-size);
 }
 .aboutContact p{
     font-size: var(--medium-text);
@@ -374,7 +390,7 @@ html {
 /*================================Pricing  section========================================*/
 .pricing-headerText{
     text-align: center;
-    font-size: var(--heading1-text);
+    font-size: var(--h1-font-size);
     margin-bottom: 5.5rem;
 }
 .pricing-col .see-more-div{
@@ -394,6 +410,7 @@ html {
     background: var(--black-color);
     text-align: center;
     font-size: var(--heading1-text);
+
     transition: all 0.2s ease;
     padding: 10px 16px;
 }
@@ -435,7 +452,7 @@ html {
 .pricing-col h3{
     text-align: center;
     margin-bottom: 1.6rem;
-    font-size: 4rem;
+    font-size: var(--biggest-font-size);
 
 }
 .pricing-col:hover h3{
@@ -444,7 +461,7 @@ html {
 }
 
 .pricing-col p{
-    font-size: var(--body-text);
+    font-size: var(--normal-font-size);
     margin: 2rem 0;
     transition: all 0.1s ease;
     line-height: 2rem;
@@ -492,7 +509,7 @@ html {
 }
 .footer_scroll i {
     animation: scroll-down 2s infinite;
-    font-size: var(--heading3-text);
+    font-size: var(--h3-font-size);
 }
 
 
@@ -572,59 +589,125 @@ html {
         gap: 25rem;
     }
     .header .logo{
+
         font-size: 3.2rem;
     }
-    .header .navbar a{
+
+    .header .navbar a {
         font-size: 2.4rem;
         margin: 0 1.8rem;
     }
-/*============================Home @media====================================================  */
-.home{
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
 
-}
-.home .home_name{
-    position: absolute;
-    top: 19rem;
-}
-.home .home-image
-{
-    order: 1;
-}
-    .home .home-image .kirubelImage{
-        min-width: 300px;
-    }
+    /*============================Home @media====================================================  */
+    @media only screen and (min-width: 1000px) {
+        .home {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
 
-    .home .home_logo a{
-        font-size: 4rem;
-    }
-    .home .content h2{
-        font-size: 2.8rem;
-    }
+        }
 
-    .home .home_logo{
-        margin-left: 1rem;
-    }
+        .home .home_name {
+            position: absolute;
+            top: 19rem;
+        }
 
-    .home .scrollDown_text{
-        font-size: 2.5rem;
-    }
-    .home_scrollBox i{
-        font-size: 2.7rem;
-    }
+        .home .home-image {
+            order: 1;
+        }
 
-/* ==========================About=============================*/
+        .home .home-image .kirubelImage {
+            min-width: 300px;
+        }
 
-    .about{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        .home .home_logo a {
+            font-size: var(--biggest-font-size);
+        }
+
+        .home .content h2 {
+            font-size: 2.8rem;
+        }
+
+        .home .home_logo {
+            order: 1;
+        }
+
+        .home .scrollDown_text {
+            font-size: 2.5rem;
+        }
+
+        .home_scrollBox i {
+            font-size: 2.7rem;
+        }
+
+        /* ==========================About=============================*/
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        .aboutImage {
+            min-width: 200px;
+            max-width: 300px;
+            position: relative;
+            left: 0;
+        }
+
+        .about .content h1 {
+            font-size: var(--h1-font-size);
+            margin: 0;
+        }
+
+        .about .content p {
+            font-size: 2.6rem;
+        }
+
+        .about .content ul li {
+            font-size: 2.7rem;
+        }
+
+        .about .content ul li span {
+            font-size: 3rem;
+        }
+
+        /* =================================pricing  media=======================================*/
+        .pricing .pricing-row {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 0.85fr));
+
+        }
+
+        .pricing-col .see-more {
+            font-size: var(--normal-font-size);
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        .pricing-col p {
+            font-size: var(--normal-font-size);
+            margin-bottom: 2.5rem;
+        }
+
+        /*===================================Footer==================================================*/
+        .footer {
+            padding: 1.1rem 1.2rem;
+        }
+
+        .footer p {
+            font-size: var(--h2-font-size);
+        }
+
+        .footer .footer-nav a {
+            font-size: 1.9rem;
+            padding: 0 1rem;
+        }
+
+
     }
     .aboutImage {
         min-width: 200px;
@@ -677,7 +760,7 @@ html {
     }
 
 
-}
+
 
 
 @media only screen and (min-width: 1400px) {
@@ -688,7 +771,6 @@ html {
         gap: 45rem;
     }
 }
-
 
 
 /*@media screen and (max-width: 768px) {*/
