@@ -4,10 +4,16 @@
     --black-color: hsl(0, 0%, 0%);
     --black-color-light: hsl(0, 0%, 40%);
     --white-color: hsl(0, 0%, 95%);
-    --title-color: hsl(0, 0%, 0%);
-    --text-color: hsl(0, 0%, 35%);
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsl(0, 0%, 83%);
+    --medium-text: 1.8rem;
+    --small-text: 1.5rem;
+    --heading1-text:3.4rem;
+    --heading2-text:2.7rem;
+    --body-text:2.7rem;
+    --heading3-text: 2.1rem;
+    --title-text: 5.5rem;
+
 }
 *{
     font-family: 'Bai Jamjuree', sans-serif;
@@ -39,6 +45,7 @@ html {
     color: var(--white-color);
     background: var(--black-color);
     font-size: 1.3rem;
+
 }
 .geometric-box {
     position: absolute;
@@ -74,12 +81,12 @@ html {
     position: fixed;
     width: 100%;
     background: var(--body-color);
-    padding: 1.5rem 10rem;
+    padding: 1.5rem 3rem;
     z-index: 10000;
 }
 
 .header .logo{
-    font-size: 2.8rem;
+    font-size: var(--heading1-text);
     color: var(--black-color);
 
 }
@@ -87,7 +94,7 @@ html {
 .header nav a{
     position: relative;
     color: var(--black-color);
-    font-size: 1.6rem;
+    font-size: var(--medium-text);
     margin: 3rem;
     transition: all 0.4s ease;
 }
@@ -116,7 +123,7 @@ html {
 }
 /*for screens less than 900px when you click the menu btn*/
 .navbar.active{
-    height: 28.125rem;
+    height: 41rem;
     opacity: 1;
 }
 .navbar.active a{
@@ -126,31 +133,27 @@ html {
 /*                    Home                             */
 .home{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding-top: 150px;
+    margin-bottom: 5rem;
+    gap: 2rem 6rem;
+
 }
+
 .home-image{
     position: relative;
-    margin-left: 2rem;
+    margin: 1.5rem;
 }
 .home .home-image .kirubelImage{
     width: 100%;
-    min-width: 170px;
-    max-width: 550px;
+    min-width: 200px;
+    max-width: 395px;
     z-index: 10;
 }
-.home .curved-arrow{
-    position: absolute;
-    top:-7rem;
-    right: 4rem;
-    rotate: 80deg;
-}
-.home .random-lines{
-    position: absolute;
-    top: 4rem;
-    z-index: -10;
-}
+
 .home .home_shadow
 {
     position: absolute;
@@ -162,16 +165,21 @@ html {
     right: -2rem;
     z-index: -1;
 }
+.home_name{
+    order: -1;
+    font-size: var(--heading1-text);
+    font-weight: bolder;
+}
 .home .content{
     position: relative;
 }
-.home .content h1{
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
+
 .home .content h2{
-    font-size: 2rem;
-    margin-bottom: 2.2rem;
+    position: relative;
+    font-size: var(--heading2-text);
+    margin-bottom: 2.9rem;
+    padding-right: .3rem;
+    word-spacing: 2.7px;
 }
 .invert{
     filter: invert(1);
@@ -180,15 +188,15 @@ html {
 .home_scroll{
     position: absolute;
     display: flex;
-    width: max-content;
+    width: fit-content;
     margin: 0 auto;
 }
 .home_scrollBox{
     display: flex;
     align-items: center;
     background: var(--black-color);
-    padding: 0.8rem 2rem;
-    font-size: 3rem;
+    padding: 0.5rem 1.4rem;
+    font-size: var(--heading1-text);
     overflow: hidden;
     transition: all 0.4s;
     color: var(--white-color);
@@ -196,21 +204,25 @@ html {
 }
 .home_scrollBox i {
     animation: scroll-down 2s infinite;
+    font-size: var(--heading2-text);
 }
 .scrollDown_text{
     color: var(--black-color);
-    font-size: 1.4rem;
+    font-size: var(--heading2-text);
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: .5rem;
     margin-left: 1rem;
 }
 .home_logo {
+    position: absolute;
+    left: -13rem;
+    top: 13rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .home_logo .logo{
-    font-size: 2.5rem;
+    font-size: var(--heading1-text);
     color: var(--body-color);
     padding: .5rem;
     background: var(--black-color-light);
@@ -228,19 +240,21 @@ html {
 {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     margin-top: 50px;
+    margin-bottom: 5rem;
 }
             /*The about Image*/
 .about-image{
     position: relative;
     padding: 2rem 9rem;
+    margin-bottom: 8rem;
 }
 .aboutImage{
-    width: 100%;
-    min-width: 270px;
-    max-width: 420px;
+    min-width: 250px;
+    max-width: 450px;
     z-index: 100;
 }
 .aboutImage img{
@@ -258,23 +272,32 @@ html {
 
 }
 .about .content{
-    position: relative;
-    top: -1rem;
+    padding: 0 3rem;
+    width: fit-content;
+    height: fit-content;
 }
 
-.about .content h1{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.aboutMeTitle h1{
+    font-size: var(--title-text);
+    margin-bottom: 13rem;
+    text-align: center;
 }
 .about .content p{
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--body-text);
+    font-weight: bold;
+    word-spacing: 2.8px;
+    margin-bottom: 2rem;
+}
+.about .content ul{
+    list-style-type:none ;
 }
 .about .content ul li{
-font-size: 1.7rem;
+ font-size: var(--small-text);
+ padding: 0 .1rem;
 }
+
 .about .content ul li span{
-    font-size:1.9rem;
+    font-size:var(--body-text);
     font-weight: bold;
 }
 .about .random-lines{
@@ -307,9 +330,11 @@ font-size: 1.7rem;
     color: var(--white-color);
 }
 .aboutContact i{
-    margin: 1rem;
+    margin: .8rem;
+    font-size:var(--body-text);
 }
 .aboutContact p{
+    font-size: var(--medium-text);
     padding-right: 1rem;
     position: relative;
     top: 0.5rem;
@@ -318,39 +343,31 @@ font-size: 1.7rem;
 .about-contact a{
     border: 2px solid var(--black-color);
     padding: 0.2rem 1rem;
-    font-size: 3rem;
+    font-size: 5rem;
     color: var(--black-color);
     transition: border 0.2s ease;
 }
 .about-contact a:hover{
-    border-color:var(--first-color);
+    border-color:#72b2d4;
+}
+.about-telegram i{
+    color: #72b2d4;
 }
 
-
-/*Pricing  section*/
+/*================================Pricing  section========================================*/
 .pricing-headerText{
     text-align: center;
-    font-size: 3.6rem;
+    font-size: var(--heading1-text);
     margin-bottom: 5.5rem;
-}
-.priceTime{
-    display: flex;
-    width: fit-content;
-    color: white;
-    margin: 0 auto 5rem auto;
-    padding: 0.5rem 0.3rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    background: var(--black-color);
-    transition: all 0.4s ease;
 }
 .pricing-col .see-more{
     position: absolute;
-    background: var(--black-color);
-    padding:1.5rem 2.8rem;
-    font-size: 1.7rem;
-    width: fit-content;
+    right: 25%;
     bottom: 1rem;
+    background: var(--black-color);
+    text-align: center;
+    width: 50%;
+    font-size: var(--heading1-text);
     transition: all 0.2s ease;
 }
 .pricing-col .see-more:hover
@@ -363,18 +380,15 @@ font-size: 1.7rem;
 .pricing-col .see-more:hover a {
     color: var(--black-color);
 }
-/*.pricing-col span.active{*/
-/*    background: var(--white-color);*/
-/*    color:var(--black-color);*/
-/*    padding: 2rem 1.8rem;*/
-/*    display: inline;*/
-/*    font-size: 1.7rem;*/
-/*}*/
+/*For the margin for the see more to go down more*/
+.bottom-price{
+    margin-bottom: 2rem;
+}
 .pricing .pricing-row{
     width: 95%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     grid-gap:2rem ;
 }
 .pricing-col{
@@ -390,20 +404,11 @@ font-size: 1.7rem;
     background: var(--container-color);
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 1);
 }
-.pricing-col h1
-{
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 3.4rem;
-}
-.pricing-col span{
-    display: inline;
-    font-weight: 300;
-}
+
 .pricing-col h3{
     text-align: center;
     margin-bottom: 1.6rem;
-    font-size: 1.9rem;
+    font-size: 4rem;
 
 }
 .pricing-col:hover h3{
@@ -412,9 +417,10 @@ font-size: 1.7rem;
 }
 
 .pricing-col p{
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
+    font-size: var(--body-text);
+    margin: 2rem 0;
     transition: all 0.1s ease;
+    line-height: 2rem;
 
 }
 .pricing-col p i {
@@ -429,27 +435,36 @@ font-size: 1.7rem;
 .footer{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 2rem 1.5rem;
+    justify-content: space-between;
+    padding: 2.3rem 1.7rem;
     background: var(--black-color);
 }
 .footer p{
     color: var(--black-color-light);
-    font-size: 1.4rem;
+    font-size: var(--medium-text);
     cursor: pointer;
+
 }
 .footer p span
 {
     color: var(--white-color);
 }
 .footer a{
-    font-size: 1.3rem;
+    font-size: var(--body-text);
     margin: 1.5rem;
     color: var(--white-color);
     transition: all 0.2s ease;
 }
 .footer a:hover{
     color: var(--black-color-light);
+}
+.footer_scroll{
+    transition: all 0.4s ease;
+
+}
+.footer_scroll i {
+    animation: scroll-down 2s infinite;
+    font-size: var(--heading3-text);
 }
 
 
@@ -472,17 +487,19 @@ font-size: 1.7rem;
 
 
 /*Nav media for the navbar for smaller screens */
+
+
 @media only screen and (max-width: 1020px){
 
 #menu_btn{
-    font-size: 2rem;
+    font-size: 4.3rem;
     display: block;
     margin-left: 24rem;
 }
 
     .navbar{
         position: absolute;
-        top: 5rem;
+        top: 8rem;
         left: 0;
         right: 0;
         background: var(--container-color);
@@ -504,111 +521,151 @@ font-size: 1.7rem;
         opacity: 0;
     }
 }
+@media only scrren and (max-width:768px){
+    html {
+        font-size: 14px;
+    }
+}
+@media only scrren and (max-width:480px){
+    html {
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 1000px){
 
+    .header .logo{
+        font-size: 3.2rem;
+    }
+    .header .navbar a{
+        font-size: 2.4rem;
+        margin: 0 1.8rem;
+    }
+/*============================Home @media====================================================  */
+.home{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
+}
+.home .home_name{
+    position: absolute;
+    top: 19rem;
+}
+.home .home-image
+{
+    order: 1;
+}
+    .home .home-image .kirubelImage{
+        min-width: 300px;
+    }
 
-/* Home media*/
-/* Media query for small screens (up to 768px) */
-@media screen and (max-width: 768px) {
-    .home .content h1 {
+    .home .home_logo a{
+        font-size: 4rem;
+    }
+    .home .content h2{
+        font-size: 2.8rem;
+    }
+
+    .home .home_logo{
+        margin-left: 1rem;
+    }
+
+    .home .scrollDown_text{
         font-size: 2.5rem;
     }
-
-    .home .content h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1.8rem;
+    .home_scrollBox i{
+        font-size: 2.7rem;
     }
 
+/* ==========================About=============================*/
+
+    .about{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .aboutImage {
+        min-width: 200px;
+        max-width: 300px;
+        position: relative;
+        left: 0;
+    }
+    .about .content h1{
+        font-size: 4rem;
+        margin: 0;
+    }
+    .about .content p{
+        font-size: 2.6rem;
+    }
+    .about .content ul li{
+        font-size: 2.7rem;
+    }
+    .about .content ul li span{
+        font-size: 3rem;
+    }
+    /* =================================pricing  media=======================================*/
+
+
+    .pricing .pricing-row{
+            grid-template-columns: repeat(auto-fit,minmax(400px,0.85fr));
+
+    }
+
+    .pricing-col .see-more{
+        font-size: 2.4rem;
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+    }
+    .pricing-col p{
+        font-size: 2.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+/*===================================Footer==================================================*/
+
+    .footer{
+        padding: 1.1rem 1.2rem;
+    }
+    .footer p{
+        font-size: 1.9rem;
+    }
+    .footer .footer-nav a {
+        font-size: 1.9rem;
+        padding: 0 1rem;
+    }
+
+
 }
+
+
+
+
+
+
+
+
+/*@media screen and (max-width: 768px) {*/
+
+
+/*    !*.home .content h2 {*!*/
+/*    !*    font-size: 5rem;*!*/
+/*    !*    padding-right:.1rem;*!*/
+/*    !*}*!*/
+/*    .home .content h1{*/
+/*        font-size: 2rem;*/
+/*    }*/
+
+/*}*/
 
 /* Media query for extra small screens (up to 576px) */
-@media screen and (max-width: 576px) {
-    .home .content h1 {
-        font-size: 2rem;
-    }
-
-    .home .content h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-}
 /*Nav Media*/
 
-@media screen and (max-width: 768px) {
-    .header {
-        padding: 1rem 2rem; /* Adjust padding for smaller screens */
-        justify-content: center; /* Center the items */
-    }
-
-    .header nav a {
-        margin: 1rem; /* Reduce margin between links */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .header {
-        padding: 1rem; /* Further reduce padding for smaller screens */
-    }
-
-    .header .logo {
-        font-size: 1.85rem; /* Decrease font size for logo */
-    }
-
-    .header nav a {
-        margin: 0.5rem; /* Reduce margin even further between links */
-    }
-}
 
 
 /*About media*/
-@media only screen and (max-width: 1000px) {
-    .about{
-        display: flex;
-        flex-direction: column;
-    }
 
-    .about .content {
-        margin-top: 5rem;
-        padding: 2rem;
-        text-align: left;
-    }
-
-    .about .content h1 {
-        font-size: 2rem; /* Adjust the font size */
-        margin-bottom: 1rem;
-    }
-
-    .about .content p {
-        font-size: 1.8rem; /* Adjust the font size */
-        line-height: 1.4; /* Adjust the line height */
-        margin-bottom: 1.8rem;
-    }
-
-    .about .random-lines {
-        bottom: 20rem;
-        right: 12rem;
-    }
-    .about .random-lines{
-        position: absolute;
-        z-index: -11;
-        bottom:32rem;
-        right: 6rem;
-    }
-
-}
-/*@media for the pricing section*/
-@media only screen and (max-width: 768px) {
-    .pricing .pricing-text span {
-        font-size: 1.5rem;
-    }
-
-    .pricing .pricing-col h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-
-    .pricing-col h1 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-}

@@ -3,10 +3,17 @@
     --black-color: hsl(0, 0%, 0%);
     --black-color-light: hsl(0, 0%, 40%);
     --white-color: hsl(0, 0%, 95%);
-    --title-color: hsl(0, 0%, 0%);
-    --text-color: hsl(0, 0%, 35%);
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsl(0, 0%, 83%);
+    --medium-text: 1.8rem;
+    --higher-medium-text: 2.7rem;
+    --small-text: 1.5rem;
+    --heading1-text:3.4rem;
+    --heading2-text:2.7rem;
+    --body-text:2.7rem;
+    --heading3-text: 2.1rem;
+    --title-text: 5.5rem;
+
 }
 *{
     font-family: 'Bai Jamjuree', sans-serif;
@@ -39,7 +46,7 @@ html {
 
 /*Disclaimer    */
 .disclaimer{
-    font-size: 2.2rem;
+    font-size: var(--medium-text);
     text-align: center;
     margin-top: 3rem;
 }
@@ -57,26 +64,26 @@ html {
 .priceTime span{
     background: var(--black-color);
     padding:2rem 1.6rem;
-    font-size: 1.7rem;
+    font-size: var(--heading2-text);
 }
 .priceTime span.active{
     background: var(--white-color);
     color:var(--black-color);
     padding: 2rem 1.8rem;
     display: inline;
-    font-size: 1.7rem;
+    font-size: var(--heading2-text);
 }
 /*For the row of the button*/
  .pricing-row{
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     grid-gap:2rem ;
 }
 .pricing-col{
     position: relative;
-    padding: 6rem 0 6rem 1.6rem; /* Adjust padding for smaller screens */
+    padding: 6rem 0 6rem 1rem; /* Adjust padding for smaller screens */
     border: 2px solid var(--black-color);
     background: var(--white-color);
     transition: all 0.4s ease;
@@ -88,7 +95,7 @@ html {
     box-shadow: 3px 4px 8px rgba(0, 0, 0, 1);
 }
  .package-text{
-    font-size: 3.5rem;
+    font-size: var(--heading1-text);
     text-align: center;
     margin-bottom: 4rem;
     cursor: pointer;
@@ -97,27 +104,18 @@ html {
  .pricing-col h1
 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: var(--heading2-text);
     margin-bottom: 3.4rem;
 }
  .pricing-col span{
     display: inline;
     font-weight: 300;
 }
- .pricing-col h3{
-    text-align: center;
-    margin-bottom: 1.6rem;
-    font-size: 1.9rem;
 
-}
- .pricing-col:hover h3{
-    color: var(--first-color);
-
-}
 
  .pricing-col p{
-    font-size: 1.7rem;
-    margin: 1.5rem 0;
+    font-size: var(--higher-medium-text);
+    margin: 1.2rem 0;
     transition: all 0.1s ease;
 
 }
@@ -129,7 +127,7 @@ html {
     position: absolute;
     top: 4rem;
     left: 3.4rem;
-    font-size: 2rem;
+    font-size: var(--medium-text);
     margin-bottom: 2rem;
 }
 

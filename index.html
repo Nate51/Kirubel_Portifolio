@@ -18,27 +18,40 @@
 <!--Header-->
 <header class="header">
     <a href="#" class="logo" >Kirubel Tewodros</a>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <a href="#home" class="underline-effect">Home</a>
             <a href="#about" class="underline-effect">About</a>
             <a href="#projects" class="underline-effect">Projects</a>
             <a href="#pricing" class="underline-effect">Pricing</a>
-            <a href="#contact" class="underline-effect">Contact</a>
+            <a href="#contact-me" class="underline-effect">Contact</a>
             <!-- close button -->
         </nav>
     <a id="menu_btn"><i class="ri-menu-2-line"></i></a>
 
 </header>
 <!--Home-->
-<section class="home" id="home">
+<section class="home section" id="home">
+    <!-- The home image and it's shadow-->
+    <div class="home-image">
+        <img class ="kirubelImage " src="image/home-perfil.jpg" alt="home-page">
+        <div class="geometric-box"></div>
+        <div class="home_shadow"></div>
+
+        <div class="home_logo">
+            <a href="" class="logo"><i class="ri-instagram-line"></i></a>
+            <a href="" class="logo"><i class="ri-github-line"></i></a>
+        </div>
+    </div>
+
+    <div class="home_name"><h1>Kirubel Tewodros</h1><br></div>
 
     <div class="content">
-        <h1>Kirubel Tewodros</h1><br>
-        <h2>Welcome to Kirubel Tewodros's World: Where Every Click Tells a Story.
-            Photographer & Social Media Manager Extraordinaire.
-            <img src="image/curved-arrow.svg" class="invert curved-arrow">
 
-        </h2>
+            <h2>Welcome to Kirubel Tewodros's World: Where Every Click Tells a Story.
+                Photographer & Social Media Manager Extraordinaire.
+            </h2>
+
+
             <!-- The scroll box       -->
         <a href="#about" class="home_scroll">
             <div class="home_scrollBox">
@@ -48,23 +61,17 @@
 
         </a>
     </div>
-    <!-- The home image and it's shadow-->
-    <div class="home-image">
-            <img class ="kirubelImage " src="image/home-perfil.jpg" alt="home-page">
-        <div class="geometric-box"></div>
-            <div class="home_shadow"></div>
 
-    </div>
-    <div class="home_logo">
-        <a href="" class="logo"><i class="ri-instagram-line"></i></a>
-        <a href="" class="logo"><i class="ri-github-line"></i></a>
-    </div>
 </section>
 
 
 <!--About Section-->
+    <div class="aboutMeTitle section">
+        <h1 class="aboutMeTitle">About Me</h1>
+    </div>
+<div class="about" id="about">
 
-<section class="about" id="about">
+
     <div class="about-image">
         <img class="aboutImage" src="image/about-perfil.jpg" alt="about-image">
         <img src="image/random-lines.svg" class="invert random-lines">
@@ -73,11 +80,12 @@
     </div>
 
     <div class="content">
-        <h1 class="aboutMeTitle">About Me</h1>
-        <p>Hello, I'm Kirubel Tewodros—a digital enthusiast wearing multiple hats. I specialize in social media management, videography, and website development.
-            With a passion for creativity, I excel in crafting engaging digital experiences. Let's bring your ideas to life in the digital world!</p>
+                <p>Hello, I'm Kirubel Tewodros—a digital enthusiast wearing multiple hats.
+                    I specialize in social media management, videography, and website development.
+                    With a passion for creativity, I excel in crafting engaging digital experiences.
+                    Let's bring your ideas to life in the digital world!</p>
         <ul>
-            <li><span>My Skills are:</span> HTML, CSS, Javascript, Git,and GitHub.</li>
+            <li>    <span>My Skills are:</span> HTML, CSS, Javascript, Git,and GitHub.</li>
         </ul>
 
         <div class="about-contact">
@@ -85,14 +93,15 @@
                 <p>Contact Me</p>
                 </div>
 
-            <a href="">
+            <a class="about-telegram" href="">
                 <i class="ri-telegram-line"></i>
             </a>
         </div>
     </div>
-</section>
+</div>
+<!--==============================Projects=================================-->
 
-<section id="projects">
+<section id="projects" class="section">
     <h1 class="section-title">Projects.</h1>
     <div class="content">
         <div class="project-container">
@@ -207,7 +216,8 @@
     </div>
 </section>
 
-<section class="pricing" id="pricing">
+<!--========================================Pricing=================================================-->
+<section class="pricing section" id="pricing">
 
     <h1 class="pricing-headerText">Offers.</h1>
 
@@ -218,8 +228,8 @@
             <h3>Gold</h3>
             <p><i class="ri-checkbox-fill"></i>Front-End Website</p>
             <p><i class="ri-checkbox-fill"></i>Social Media Management</p>
-            <p><i class="ri-checkbox-fill"></i>Products Photography(with Graphics)</p>
-            <p><i class="ri-checkbox-fill"></i>Videography</p><br>
+            <p><i class="ri-checkbox-fill"></i>Products Photography</p>
+            <p><i class="ri-checkbox-fill bottom-price"></i>Videography</p><br>
             <div class="see-more">
                 <a href="price.html" target="_blank">See More</a>
             </div>
@@ -229,8 +239,8 @@
 
             <h3>Silver</h3>
             <p><i class="ri-checkbox-fill"></i>Social Media Management</p>
-            <p><i class="ri-checkbox-fill"></i>Products Photography(with Graphics)</p>
-            <p><i class="ri-checkbox-fill"></i>Videography</p>
+            <p><i class="ri-checkbox-fill"></i>Products Photography</p>
+            <p><i class="ri-checkbox-fill bottom-price"></i>Videography</p>
             <div class="see-more">
                 <a href="price.html" target="_blank">See More</a>
             </div>
@@ -238,8 +248,8 @@
         <div class="pricing-col">
 
             <h3>Bronze</h3>
-            <p><i class="ri-checkbox-fill"></i>Products Photography(with Graphics)</p>
-            <p><i class="ri-checkbox-fill"></i>Videography</p>
+            <p><i class="ri-checkbox-fill"></i>Products Photography</p>
+            <p><i class="ri-checkbox-fill bottom-price"></i>Videography</p>
             <div class="see-more">
                 <a href="price.html" target="_blank">See More</a>
             </div>
@@ -249,7 +259,7 @@
 </section>
 
 
-<section id="contact-me">
+<section id="contact-me" class="contact section">
     <div class="contact-container">
         <div class="form-info">
             <h1 class="section-title">Contact me.</h1>
@@ -263,7 +273,7 @@
         </div>
         <div class="form">
             <h1>Send Me A Message</h1>
-            <form>
+            <form action="https://formsubmit.co/nathanassefa2003@email.com" method="POST">
                 <div class="info-input">
                     <div>
                         <label for="name" class="forName">First Name</label>
@@ -271,7 +281,7 @@
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input id="email" type="text" class="text-input">
+                        <input id="email" type="email" class="text-input">
                     </div>
                 </div>
                 <div class="description-input">
@@ -285,7 +295,7 @@
                     </div>
                 </div>
                 <div class="send-button">
-                    <button>
+                    <button type="submit">
                         <i class="ri-send-plane-fill"></i>
                         Send Message</button>
                 </div>
@@ -294,17 +304,20 @@
     </div>
 </section>
 
-  <footer class="footer" id="footer">
+  <footer class="footer section" id="footer">
     <p><i class="ri-copyright-fill"></i>All rights reserved by <span>Kirubel Tewodros.</span></p>
 
-    <div class="footer-nav">
+      <div class="footer-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+          <a href="#home" class="footer_scroll">
 
+              <i class="ri-arrow-up-line footer_scrollBox"></i>
+          </a>
     </div>
 
-</footer>
+  </footer>
 
 <script src="script.js"></script>
 </body>
