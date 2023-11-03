@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 5px;
 }
 
 .project-container{
@@ -106,7 +106,7 @@
 .form{
     padding: 200px 100px;
     background-color: #000000;
-    width: 60%;
+    width: 90%;
 }
 .form div{
     width: 100%;

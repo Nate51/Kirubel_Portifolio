@@ -6,6 +6,13 @@
     --white-color: hsl(0, 0%, 95%);
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsl(0, 0%, 83%);
+    --medium-text: 1.8rem;
+    --small-text: 1.5rem;
+    --heading1-text:3.4rem;
+    --heading2-text:2.7rem;
+    --body-text:2rem;
+    --heading3-text: 2.1rem;
+    --title-text: 5.5rem;
     --biggest-font-size: 4rem;
     --h1-font-size: 2.8rem;
     --h2-font-size: 2rem;
@@ -32,13 +39,25 @@ html {
 body
 {
     background: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.mainSection{
+    padding: 0 30px;
+
 }
 
 section
 {
-    padding:7rem 10%;
+    /*background-color: #ff6535;*/
+    padding: 0 4rem;
 }
 
+html {
+    font-size: 9px;
+    overflow-x: hidden;
+}
 
 /*A default for btn */
 .btn
@@ -46,6 +65,7 @@ section
     color: var(--white-color);
     background: var(--black-color);
     font-size: 1.3rem;
+    padding: 10px 16px;
 
 }
 .geometric-box {
@@ -78,11 +98,13 @@ section
 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     width: 100%;
     background: var(--body-color);
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 0;
+    gap: 40rem;
+
     z-index: 10000;
 }
 
@@ -140,6 +162,7 @@ section
     padding-top: 150px;
     margin-bottom: 5rem;
     gap: 2rem 6rem;
+
 
 }
 
@@ -254,7 +277,7 @@ section
             /*The about Image*/
 .about-image{
     position: relative;
-    padding: 2rem 9rem;
+    padding: 2rem 0;
     margin-bottom: 8rem;
 }
 .aboutImage{
@@ -269,15 +292,16 @@ section
     position: absolute;
     background: var(--white-color);
     border-bottom: 3px solid var(--first-color);
-    width: 60%;
+    width: 100%;
     height: 110%;
-    top: -4rem;
-    right: 5rem;
+    top: -3rem;
+    left: 5rem;
     z-index: -12;
 
 }
 .about .content{
     padding: 0 3rem;
+    padding-left: 7rem;
     width: fit-content;
     height: fit-content;
 }
@@ -314,7 +338,7 @@ section
 
 .about .geometric-box{
     top: 0;
-    right: 0;
+    right: -60px;
 }
 .about-contact{
     display: flex;
@@ -325,10 +349,10 @@ section
 .aboutContact{
     position: relative;
     display: flex;
-    align-items: center;
     cursor:pointer;
     transition: all 0.3s ease;
     margin-right: 5rem;
+    padding-top: 14px;
 }
 .aboutContact:hover{
     background-color: var(--first-color);
@@ -355,6 +379,10 @@ section
 .about-contact a:hover{
     border-color:#72b2d4;
 }
+.about-telegram {
+    display: flex;
+    align-items: center;
+}
 .about-telegram i{
     color: #72b2d4;
 }
@@ -365,15 +393,26 @@ section
     font-size: var(--h1-font-size);
     margin-bottom: 5.5rem;
 }
-.pricing-col .see-more{
+.pricing-col .see-more-div{
     position: absolute;
-    right: 25%;
-    bottom: 1rem;
+    right: 25%;     
+    bottom: 1rem;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+}
+
+.pricing-col .see-more{
+
+
     background: var(--black-color);
     text-align: center;
-    width: 50%;
-    font-size: var(--h1-font-size);
+    font-size: var(--heading1-text);
+
     transition: all 0.2s ease;
+    padding: 10px 16px;
 }
 .pricing-col .see-more:hover
 {
@@ -443,6 +482,7 @@ section
     justify-content: space-between;
     padding: 2.3rem 1.7rem;
     background: var(--black-color);
+    margin-top: 7rem;
 }
 .footer p{
     color: var(--black-color-light);
@@ -530,15 +570,26 @@ section
     html {
         font-size: 14px;
     }
+
 }
 @media only scrren and (max-width:480px){
     html {
         font-size: 12px;
-    }
-}
-@media only screen and (min-width: 1000px) {
 
-    .header .logo {
+    }
+
+
+}
+@media only screen and (min-width: 1000px){
+    .mainSection{
+        padding: 0 70px;
+    }
+
+    .header{
+        gap: 25rem;
+    }
+    .header .logo{
+
         font-size: 3.2rem;
     }
 
@@ -658,12 +709,68 @@ section
 
 
     }
+    .aboutImage {
+        min-width: 200px;
+        max-width: 300px;
+        position: relative;
+        left: 0;
+    }
+    .about .content h1{
+        font-size: 4rem;
+        margin: 0;
+    }
+    .about .content p{
+        font-size: 2.6rem;
+    }
+    .about .content ul li{
+        font-size: 2.7rem;
+    }
+    .about .content ul li span{
+        font-size: 3rem;
+    }
+    /* =================================pricing  media=======================================*/
+
+
+    .pricing .pricing-row{
+            grid-template-columns: repeat(auto-fit,minmax(400px,0.85fr));
+
+    }
+
+    .pricing-col .see-more{
+        font-size: 2.4rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .pricing-col p{
+        font-size: 2.75rem;
+        margin-bottom: 2.5rem;
+    }
+
+/*===================================Footer==================================================*/
+
+    .footer{
+        padding: 1.1rem 1.2rem;
+    }
+    .footer p{
+        font-size: 1.9rem;
+    }
+    .footer .footer-nav a {
+        font-size: 1.9rem;
+        padding: 0 1rem;
+    }
+
+
+
+
+
+@media only screen and (min-width: 1400px) {
+.mainSection{
+    padding: 0 170px;
 }
-
-
-
-
-
+    .header{
+        gap: 45rem;
+    }
+}
 
 
 /*@media screen and (max-width: 768px) {*/
