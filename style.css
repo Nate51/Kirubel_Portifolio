@@ -1,13 +1,16 @@
 :root
 {
-    --first-color: hsl(14, 98%, 50%);
+        --first-color: hsl(14, 98%, 50%);
     --black-color: hsl(0, 0%, 0%);
     --black-color-light: hsl(0, 0%, 40%);
     --white-color: hsl(0, 0%, 95%);
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsl(0, 0%, 83%);
-    --medium-text: 1.8rem;
-    --small-text: 1.5rem;
+
+    --large-text: 4.3rem;
+    --medium-text: 3.5rem;
+    --small-text: 2.5rem;
+
     --heading1-text:3.4rem;
     --heading2-text:2.7rem;
     --body-text:2rem;
@@ -33,8 +36,9 @@
     transition: .2s linear;
 }
 html {
-    font-size: 10px;
+    font-size: 100px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body
 {
@@ -57,6 +61,7 @@ section
 html {
     font-size: 9px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /*A default for btn */
@@ -74,6 +79,7 @@ html {
     height: 20px;
     background-color: var(--first-color);
     rotate: -30deg;
+    z-index: 20;
 }
 /*this box does not rotate*/
 .geometricBox {
@@ -159,46 +165,58 @@ html {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 150px;
-    margin-bottom: 5rem;
+    margin-top: 20rem;
     gap: 2rem 6rem;
-
+    margin-bottom: 27rem;
 
 }
 
 .home-image{
     position: relative;
+    display: flex;
+    align-items: center;
     margin: 1.5rem;
+    padding-right: 10rem;
 }
 .home .home-image .kirubelImage{
     width: 100%;
-    min-width: 200px;
-    max-width: 395px;
+    min-width: 300px;
+    max-width: 490px;
     z-index: 10;
 }
 
 .home .home_shadow
 {
     position: absolute;
-    width: 100%;
+    width: 67%;
     height: 100%;
     background: var(--container-color);
     border: 4px solid var(--black-color);
-    bottom: -0.95rem;
-    right: -2rem;
+    top: 1.7rem;
+    /*left: 2rem;*/
+    right: 8rem;
     z-index: -1;
 }
 .home_name{
     order: -1;
-    font-size: var(--h1-font-size);
+    font-size: var(--title-text);
     font-weight: bold;
+    top: 0;
 }
-
-
-.home .content h2{
+.home-image .geometric-box{
+    left: 10rem;
+    top: 10rem;
+}
+.home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home .content p{
     position: relative;
-    font-size: var(--h2-font-size);
+    font-size: var(--medium-text);
     margin-bottom: 2.9rem;
+    margin-top: 10rem;
     padding-right: .3rem;
     word-spacing: 2.7px;
 }
@@ -207,17 +225,17 @@ html {
 }
 /*Scroll Down*/
 .home_scroll{
-    position: absolute;
     display: flex;
-    width: fit-content;
-    margin: 0 auto;
+    margin-top: 80px;
+    align-items: center;
+
 }
 .home_scrollBox{
     display: flex;
-    align-items: center;
+    justify-content: center;
     background: var(--black-color);
     padding: 0.5rem 1.4rem;
-    font-size: var(--h1-font-size);
+    font-size: var(--title-text);
     overflow: hidden;
     transition: all 0.4s;
     color: var(--white-color);
@@ -225,23 +243,18 @@ html {
 }
 .home_scrollBox i {
     animation: scroll-down 2s infinite;
-    font-size: var(--h2-font-size);
+    font-size: var(--title-text);
 }
 .scrollDown_text{
     color: var(--black-color);
-    font-size: var(--h2-font-size);
+    font-size: var(--medium-text);
     font-weight: bold;
     margin-top: .5rem;
     margin-left: 1rem;
 }
-.home-image-logo{
-    display: flex;
-    align-items: center;
 
-}
-.home-image-shadow-box{
-    position: relative;
-}
+
+
 .home_logo {
     display: flex;
     flex-direction: column;
@@ -250,14 +263,15 @@ html {
     margin-right: 3rem;
 }
 .home_logo .logo{
-    font-size: var(--h1-font-size);
+    font-size: 5rem;
     color: var(--body-color);
-    padding: .5rem;
+    padding: .3rem;
     background: var(--black-color-light);
-    margin-left: 5.7rem;
+    margin-left: 2.7rem;
     margin-bottom: 1rem;
     transition: all 0.5s ease;
 }
+
 .home_logo .logo:hover{
     color: var(--white-color);
     background-color: var(--black-color);
@@ -274,7 +288,7 @@ html {
     margin-top: 50px;
     margin-bottom: 5rem;
 }
-            /*The about Image*/
+         /*The about Image*/
 .about-image{
     position: relative;
     padding: 2rem 0;
@@ -300,20 +314,18 @@ html {
 
 }
 .about .content{
-    padding: 0 3rem;
-    padding-left: 7rem;
+
     width: fit-content;
     height: fit-content;
 }
 
 .aboutMeTitle h1{
-    font-size: var(--biggest-font-size);
+    font-size: var(--title-text);
     margin-bottom: 13rem;
     text-align: center;
 }
 .about .content p{
-    font-size: var(--normal-font-size);
-    font-weight: bold;
+    font-size: var(--medium-text);
     word-spacing: 2.8px;
     margin-bottom: 2rem;
 }
@@ -434,6 +446,7 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     grid-gap:2rem ;
+    justify-content: center;
 }
 .pricing-col{
     position: relative;
@@ -442,6 +455,8 @@ html {
     background: var(--white-color);
     transition: all 0.4s ease;
     cursor: pointer;
+    height: 100%;
+    width: 95%;
 }
 .pricing-col:hover{
     transform: translateY(-7px);
@@ -566,29 +581,17 @@ html {
         opacity: 0;
     }
 }
-@media only scrren and (max-width:768px){
-    html {
-        font-size: 14px;
-    }
 
-}
-@media only scrren and (max-width:480px){
-    html {
-        font-size: 12px;
-
-    }
-
-
-}
-@media only screen and (min-width: 1000px){
-    .mainSection{
+@media only screen and (min-width: 1000px) {
+    .mainSection {
         padding: 0 70px;
     }
 
-    .header{
+    .header {
         gap: 25rem;
     }
-    .header .logo{
+
+    .header .logo {
 
         font-size: 3.2rem;
     }
@@ -600,6 +603,10 @@ html {
 
     /*============================Home @media====================================================  */
     @media only screen and (min-width: 1000px) {
+        :root{
+            --title-text:4.6rem;
+        }
+        }
         .home {
             position: relative;
             display: flex;
@@ -607,16 +614,29 @@ html {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: nowrap;
+            margin-top: 25rem;
 
         }
 
         .home .home_name {
             position: absolute;
-            top: 19rem;
+            top: 10rem;
         }
 
         .home .home-image {
             order: 1;
+            padding-right: 0;
+        }
+        .home .home_shadow
+        {
+            position: absolute;
+            width: 74%;
+            height: 100%;
+            background: var(--container-color);
+            border: 4px solid var(--black-color);
+            top: 1rem;
+            left: 2rem;
+            z-index: -1;
         }
 
         .home .home-image .kirubelImage {
@@ -627,13 +647,22 @@ html {
             font-size: var(--biggest-font-size);
         }
 
+    .home .content{
+        align-items: unset;
+    }
         .home .content h2 {
             font-size: 2.8rem;
+            margin-top: 7rem;
+
         }
 
         .home .home_logo {
             order: 1;
         }
+      .home_scroll{
+        margin-top: 0;
+
+    }
 
         .home .scrollDown_text {
             font-size: 2.5rem;
@@ -658,6 +687,10 @@ html {
             left: 0;
         }
 
+        .about .content{
+            padding: 0 3rem;
+            padding-left: 7rem;
+        }
         .about .content h1 {
             font-size: var(--h1-font-size);
             margin: 0;
@@ -715,50 +748,54 @@ html {
         position: relative;
         left: 0;
     }
-    .about .content h1{
+
+    .about .content h1 {
         font-size: 4rem;
         margin: 0;
     }
-    .about .content p{
+
+    .about .content p {
         font-size: 2.6rem;
     }
-    .about .content ul li{
+
+    .about .content ul li {
         font-size: 2.7rem;
     }
-    .about .content ul li span{
+
+    .about .content ul li span {
         font-size: 3rem;
     }
+
     /* =================================pricing  media=======================================*/
-
-
-    .pricing .pricing-row{
-            grid-template-columns: repeat(auto-fit,minmax(400px,0.85fr));
+    .pricing .pricing-row {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 0.85fr));
 
     }
 
-    .pricing-col .see-more{
+    .pricing-col .see-more {
         font-size: 2.4rem;
         margin: 0 auto;
         text-align: center;
     }
-    .pricing-col p{
+
+    .pricing-col p {
         font-size: 2.75rem;
         margin-bottom: 2.5rem;
     }
 
-/*===================================Footer==================================================*/
-
-    .footer{
+    /*===================================Footer==================================================*/
+    .footer {
         padding: 1.1rem 1.2rem;
     }
-    .footer p{
+
+    .footer p {
         font-size: 1.9rem;
     }
+
     .footer .footer-nav a {
         font-size: 1.9rem;
         padding: 0 1rem;
     }
-
 
 
 
@@ -770,7 +807,17 @@ html {
     .header{
         gap: 45rem;
     }
+
+    .home .content h2 {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+
+    }
+    :root{
+        --title-text:5.5rem;
+    }
 }
+
 
 
 /*@media screen and (max-width: 768px) {*/

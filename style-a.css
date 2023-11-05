@@ -10,7 +10,7 @@
     align-items: center;
     flex-direction: column;
     font-size: 2rem;
-    margin-top: 130px;
+    margin-top: 16rem;
 }
 #projects .content{
     margin-top: 5rem;
@@ -154,32 +154,33 @@
         font-size: 6rem;
     }
     .project-container img{
-        width: 600px;
-        height: 300px;
+        width: 800px;
+        height: 400px;
 
     }
     .project-container .link-button{
-        transform: translateX(500px) translateY(-30px);
+        transform: translateX(650px) translateY(-50px);
+        font-size: 5rem;
     }
     .project-container .title{
-        font-size: 3rem;
+        font-size: 3.9rem;
     }
     .project-container .hired-by-name{
-        font-size: 2.4rem ;
+        font-size: 2.7rem ;
     }
     .project-container .project-information{
         margin-top: 15px;
         max-width: 600px;
     }
     .project-container .project-information .description{
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
     .project-container .other-links{
         margin-top: 20px;
-        font-size: 2.5rem;
+        font-size: 3.7rem;
     }
     .other-links .logo::after{
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     #contact-me .section-title{
