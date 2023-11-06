@@ -163,12 +163,14 @@ html {
 .home{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 20rem;
+    margin-top: 10rem;
     gap: 2rem 6rem;
     margin-bottom: 27rem;
-
+    /*background-color: #ff6535;*/
+    height: 90vh;
 }
 
 .home-image{
@@ -614,7 +616,7 @@ html {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: nowrap;
-            margin-top: 25rem;
+            /*margin-top: 25rem;*/
 
         }
 
