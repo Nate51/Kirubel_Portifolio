@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -10,8 +13,12 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-MC4wpMDw7jov9eZRlxxXYq3tGQ2wXYDgEGuFPPePjZrBU6V4Fcs8Y3t8kP3NjlKf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Inter&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="style-a.css" rel="stylesheet">
+<!--    <link href="style.css" rel="stylesheet">-->
+<!--    <link href="style-a.css" rel="stylesheet">-->
+    <link href="new-style.css" rel="stylesheet">
+    <link href="new-media-style.css" rel="stylesheet">
+
+
     <title>Kirubel</title>
 </head>
 <body>
@@ -36,15 +43,18 @@
         <!-- The home image and it's shadow-->
 
         <div class="home-image">
-            <img class ="kirubelImage " src="image/home-perfil.jpg" alt="home-page">
+            <div class="image">
+                <img class ="kirubelImage " src="image/home-perfil.jpg" alt="home-page">
+                <div class="geometric-box"></div>
+                <div class="home_shadow"></div>
+                <img src="image/curved-arrow.svg" class="home_arrow">
+            </div>
 
             <div class="home_logo">
                 <a href="" class="logo"><i class="ri-instagram-line"></i></a>
                 <a href="" class="logo"><i class="ri-github-line"></i></a>
             </div>
 
-            <div class="geometric-box"></div>
-            <div class="home_shadow"></div>
         </div>
 
         <div class="home_name"><h1>Kirubel Tewodros</h1><br></div>
@@ -65,9 +75,7 @@
 
             </a>
         </div>
-
     </section>
-
 
     <!--About Section-->
     <section class="section aboutSection">

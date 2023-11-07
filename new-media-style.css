@@ -1,0 +1,82 @@
+/*@media for tablet size*/
+/*@media (min-width: 425px) {
+    !*HEADER START*!
+    .header{
+        padding: 0 1.6rem;
+        transition: 1s;
+    }
+    !*Setting up the logo "Kirubel T"*!
+    .header .logo {
+        font-size: 1.6rem;
+    }
+    !*Setting up the drop down button*!
+    #menu_btn{
+        font-size: 2.8rem;
+    }
+    !*Setting up the nav bars container*!
+    .header .navbar {
+        top: 3.7rem;
+    }
+    !*Setting up the nav bars buttons*!
+    .header .navbar a{
+        font-size: 1.4rem;
+    }
+    !*Is the animation for the drop down*!
+    .navbar.active {
+        height: 30rem;
+    }
+    !*HEADER END*!
+
+    !*---------------------------------------------------------------------*!
+
+}*/
+/*@media for laptop size*/
+@media (min-width: 1024px) {
+    /*HEADER START*/
+    .header{
+        padding: 0 1.6rem;
+        transition: 1s;
+    }
+    .header .logo {
+        font-size: 1.6rem;
+    }
+    /*Setting up the drop down button*/
+    #menu_btn{
+        display: none;
+    }
+    /*Setting up the nav bars container*/
+    .header .navbar {
+        position: relative;
+        display: flex;
+        top: 0;
+        background-color: transparent;
+        overflow: hidden;
+        opacity: 1;
+        /*background-color: #ff6535;*/
+        height: unset;
+
+    }
+    /*Setting up the nav bars buttons*/
+    .header .navbar a{
+        position: relative;
+        margin: 1.8rem 1.4rem;
+        opacity: 1;
+        font-size: 1.2rem;
+    }
+
+    /*Is the animation for the drop down*/
+
+    /*HEADER END*/
+
+    /*---------------------------------------------------------------------*/
+
+}
+
+@media (min-width: 1224px) {
+    /*HEADER START*/
+    .header{
+        padding: 0 10rem;
+        transition: 1s;
+    }
+    /*HEADER END*/
+}

@@ -1,0 +1,317 @@
+:root
+{
+    --first-color: hsl(14, 98%, 50%);
+    --black-color: hsl(0, 0%, 0%);
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsla(0, 0%, 83%, 0.84);
+
+
+
+}
+/*This is to restart the default to zero*/
+*{
+    font-family: 'Bai Jamjuree', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+    border:none;
+    text-decoration:none;
+    /*transition: .2s linear;*/
+    object-fit: cover; /* Clip the image to cover the container */
+}
+/*Setting the html to hide the elements that go out side its bounds*/
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+/*Sets the background color for the body*/
+body
+{
+    background: var(--body-color);
+    position: relative;
+
+}
+/*Container for all the section*/
+.mainSection{
+    padding: 0 1rem;
+}
+img{
+    width: 300px; /* Set the desired width */
+    object-fit: cover; /* Clip the image to cover the container */
+}
+
+/*HEADER START*/
+/*Setting up the container for the header section*/
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background: var(--body-color);
+    padding: 0.4rem 1.6rem;
+    z-index:5;
+}
+/*Setting up the logo "Kirubel T"*/
+.header .logo{
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+/*Setting up the nav bars container*/
+.header .navbar{
+    position: absolute;
+    top: 3.3rem;
+    left: 0;
+    right: 0;
+    background: var(--container-color);
+    transition: 0.5s;
+    overflow: hidden;
+    height:0;
+    opacity: 0;
+    z-index: 4;
+    backdrop-filter: blur(10px);
+
+}
+/*Setting up the nav bars buttons*/
+.header .navbar a{
+    display: block;
+    width: fit-content;
+    margin: 60px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    font-size: 1.2rem;
+    opacity: 0;
+    position: relative;
+    color: var(--black-color);
+}
+/*Is the animation for the drop down*/
+.navbar.active{
+    height: 30rem;
+    opacity: 1;
+}
+/*Is used to display the buttons while the drop down animation is in motion*/
+.navbar.active a{
+    opacity: 1;
+}
+/*Setting up the drop down button*/
+#menu_btn{
+    font-size: 1.8rem;
+    display: block;
+}
+/*Setting up the default state for the underline animation*/
+.underline-effect::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 0.209rem;
+    background: var(--black-color);
+    transition: 0.2s linear;
+}
+/*Animates when mouse is hovered*/
+.underline-effect:hover::before {
+    width: 70%;
+}
+/*Underlines it when clicked*/
+.effect::before{
+    width: 70%;
+}
+/*HEADER END*/
+
+/*---------------------------------------------------------------------*/
+
+/*HOME START*/
+/*Setting up the home page section container*/
+.home{
+    /*background-color: #ff6535;*/
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    /*justify-content: center;*/
+    flex-direction: column;
+    padding-top: 6rem;
+
+}
+/*Setting up the image container at home*/
+.home-image{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 4rem;
+    padding-right: 2.65rem;
+}
+.home-image .image{
+    position: relative;
+}
+/*Setting up the width for the image*/
+.home .home-image .kirubelImage{
+    width: 200px;
+    min-width: 200px;
+    z-index: 3;
+    /*display: none;*/
+
+}
+/*Background art for image*/
+.home-image .home_shadow
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--container-color);
+    border: 4px solid var(--black-color);
+    left: 0.7rem;
+    top: 0.5rem;
+    z-index: -1;
+}
+/*Background art for image*/
+.home-image .geometric-box{
+    left: -0.7rem;
+    top: 3rem;
+}
+/*Background art for image*/
+.home-image .home_arrow{
+    position: absolute;
+    filter: invert();
+    top: 18.5rem;
+    left: 6rem;
+    width: 50px;
+
+}
+/*Setting home page name*/
+.home_name{
+    order: -1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    top: 0;
+}
+/*Setting home paragraph container*/
+.home .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 26rem;
+}
+/*Setting home paragraph*/
+.home .content p{
+    position: relative;
+    font-size: 1rem;
+    margin-top: 23rem;
+    word-spacing: 2.7px;
+    text-align: center;
+}
+/*Icons container beside the image*/
+.home_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: -1;
+    margin-right: 0.6rem;
+
+}
+/*Icons beside the image*/
+.home_logo .logo{
+    font-size: 1.4rem;
+    color: var(--body-color);
+    padding: .25rem;
+    background: var(--black-color-light);
+    margin-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+/*Hover animation for icons*/
+.home_logo .logo:hover{
+    color: var(--white-color);
+}
+.home_scroll{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.home_scrollBox{
+
+    display: flex;
+    justify-content: center;
+    background: var(--black-color);
+    padding: 0.5rem;
+    font-size: var(--title-text);
+    overflow: hidden;
+    transition: all 0.4s;
+    color: var(--white-color);
+
+
+}
+.home_scrollBox i {
+    animation: scroll-down 2s infinite;
+    font-size: var(--title-text);
+}
+.scrollDown_text{
+    display: none;
+    color: var(--black-color);
+    font-size: var(--medium-text);
+    font-weight: bold;
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
+/*HOME END*/
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*GEOMETRIC BOX START*/
+.geometric-box {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+    rotate: -30deg;
+    /*z-index: 20;*/
+}
+.geometricBox {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--first-color);
+}
+.geometric-box::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--black-color);
+    left: -5px;
+    top: -5px;
+}
+/*GEOMETRIC BOX END*/
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1; /* Set opacity to 0 at 50% keyframe */
+    }
+    100% {
+        transform: translateY(.6rem);
+        opacity: 0;
+    }
+}

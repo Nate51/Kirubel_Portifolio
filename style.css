@@ -35,11 +35,7 @@
     text-decoration:none;
     transition: .2s linear;
 }
-html {
-    font-size: 100px;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
+
 body
 {
     background: var(--body-color);
@@ -110,7 +106,6 @@ html {
     background: var(--body-color);
     padding: 1.5rem 0;
     gap: 40rem;
-
     z-index: 10000;
 }
 
@@ -165,12 +160,12 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     margin-top: 10rem;
     gap: 2rem 6rem;
     margin-bottom: 27rem;
+    height: 100vh;
     /*background-color: #ff6535;*/
-    height: 90vh;
 }
 
 .home-image{
@@ -548,10 +543,9 @@ html {
 }
 
 
-/*Nav media for the navbar for smaller screens */
 
-
-@media only screen and (max-width: 1020px){
+/*
+@media (max-width: 1020px){
 
 #menu_btn{
     font-size: 4.3rem;
@@ -584,7 +578,8 @@ html {
     }
 }
 
-@media only screen and (min-width: 1000px) {
+
+@media (min-width: 1000px) {
     .mainSection {
         padding: 0 70px;
     }
@@ -603,20 +598,14 @@ html {
         margin: 0 1.8rem;
     }
 
-    /*============================Home @media====================================================  */
-    @media only screen and (min-width: 1000px) {
-        :root{
-            --title-text:4.6rem;
-        }
-        }
+
         .home {
             position: relative;
             display: flex;
             align-items: center;
             flex-direction: row;
             justify-content: space-between;
-            flex-wrap: nowrap;
-            /*margin-top: 25rem;*/
+            !*margin-top: 25rem;*!
 
         }
 
@@ -674,7 +663,7 @@ html {
             font-size: 2.7rem;
         }
 
-        /* ==========================About=============================*/
+        !* ==========================About=============================*!
         .about {
             display: flex;
             align-items: center;
@@ -710,7 +699,7 @@ html {
             font-size: 3rem;
         }
 
-        /* =================================pricing  media=======================================*/
+        !* =================================pricing  media=======================================*!
         .pricing .pricing-row {
             grid-template-columns: repeat(auto-fit, minmax(400px, 0.85fr));
 
@@ -728,7 +717,7 @@ html {
             margin-bottom: 2.5rem;
         }
 
-        /*===================================Footer==================================================*/
+        !*===================================Footer==================================================*!
         .footer {
             padding: 1.1rem 1.2rem;
         }
@@ -744,65 +733,11 @@ html {
 
 
     }
-    .aboutImage {
-        min-width: 200px;
-        max-width: 300px;
-        position: relative;
-        left: 0;
-    }
-
-    .about .content h1 {
-        font-size: 4rem;
-        margin: 0;
-    }
-
-    .about .content p {
-        font-size: 2.6rem;
-    }
-
-    .about .content ul li {
-        font-size: 2.7rem;
-    }
-
-    .about .content ul li span {
-        font-size: 3rem;
-    }
-
-    /* =================================pricing  media=======================================*/
-    .pricing .pricing-row {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 0.85fr));
-
-    }
-
-    .pricing-col .see-more {
-        font-size: 2.4rem;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .pricing-col p {
-        font-size: 2.75rem;
-        margin-bottom: 2.5rem;
-    }
-
-    /*===================================Footer==================================================*/
-    .footer {
-        padding: 1.1rem 1.2rem;
-    }
-
-    .footer p {
-        font-size: 1.9rem;
-    }
-
-    .footer .footer-nav a {
-        font-size: 1.9rem;
-        padding: 0 1rem;
-    }
 
 
 
 
-@media only screen and (min-width: 1400px) {
+@media (min-width: 1400px) {
 .mainSection{
     padding: 0 170px;
 }
@@ -822,23 +757,4 @@ html {
 
 
 
-/*@media screen and (max-width: 768px) {*/
-
-
-/*    !*.home .content h2 {*!*/
-/*    !*    font-size: 5rem;*!*/
-/*    !*    padding-right:.1rem;*!*/
-/*    !*}*!*/
-/*    .home .content h1{*/
-/*        font-size: 2rem;*/
-/*    }*/
-
-/*}*/
-
-/* Media query for extra small screens (up to 576px) */
-/*Nav Media*/
-
-
-
-/*About media*/
-
+*/
