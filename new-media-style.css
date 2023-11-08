@@ -32,6 +32,9 @@
 }*/
 /*@media for laptop size*/
 @media (min-width: 1024px) {
+    .mainSection{
+        padding: 0 8rem;
+    }
     /*HEADER START*/
     .header{
         padding: 0 1.6rem;
@@ -61,7 +64,7 @@
         position: relative;
         margin: 1.8rem 1.4rem;
         opacity: 1;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     /*Is the animation for the drop down*/
@@ -69,6 +72,69 @@
     /*HEADER END*/
 
     /*---------------------------------------------------------------------*/
+    /*HOME START*/
+    .home{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+        padding-top: 2rem;
+    }
+    /*Setting home page name*/
+    .home-image{
+        padding-bottom: 0;
+    }
+    .home-image .kirubelImage{
+        min-width: 300px;
+    }
+    .home .home_name{
+        display: none;
+        font-size: 2.2rem;
+        transition: 1s;
+    }
+    .home .content .home_name{
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 1rem;
+
+    }
+    .home .content{
+        order: -1;
+        align-items: unset;
+        max-width: 34rem;
+    }
+    .home .content p{
+        font-size: 1.1rem;
+        text-align: unset;
+        margin-bottom: 4rem;
+    }
+    .home_logo {
+        order: 1;
+        margin-left: 3rem;
+    }
+    .home_logo .logo {
+        padding: 0.3rem ;
+    }
+    .home-image .geometric-box {
+        top: 13rem;
+    }
+    /*Background art for image*/
+    .home-image .home_arrow{
+        top: 4rem;
+        left: -5rem;
+        rotate: 80deg;
+        width: 23%;
+
+
+    }
+.home_scrollBox i {
+    font-size: 1.6rem;
+}
+.scrollDown_text {
+    display: flex;
+}
+    /*HOME END*/
+    /*---------------------------------------------------------------------*/
+
 
 }
 
@@ -79,4 +145,20 @@
         transition: 1s;
     }
     /*HEADER END*/
+    /*---------------------------------------------------------------------*/
+
+    /*HOME START*/
+    .home .home_name{
+        display: none;
+        font-size: 2.7rem;
+        transition: 1s;
+    }
+    .home .content p{
+        font-size: 1.25rem;
+        transition: 1s;
+
+    }
+    /*HOME END*/
+    /*---------------------------------------------------------------------*/
+
 }

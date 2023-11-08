@@ -142,13 +142,11 @@ img{
 }
 /*Setting up the image container at home*/
 .home-image{
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    /*padding-top: 4rem;*/
     padding-right: 2.65rem;
+    padding-bottom: 5rem;
 }
 .home-image .image{
     position: relative;
@@ -156,10 +154,7 @@ img{
 /*Setting up the width for the image*/
 .home .home-image .kirubelImage{
     width: 200px;
-    min-width: 200px;
     z-index: 3;
-    /*display: none;*/
-
 }
 /*Background art for image*/
 .home-image .home_shadow
@@ -193,7 +188,10 @@ img{
     font-size: 1.8rem;
     font-weight: bold;
     margin-top: 7rem;
-    margin-bottom: 22rem;
+    /*margin-bottom: 22rem;*/
+}
+.home .content .home_name{
+    display: none;
 }
 /*Setting home paragraph container*/
 .home .content{
@@ -202,7 +200,6 @@ img{
     justify-content: center;
     align-items: center;
     max-width: 26rem;
-
 }
 /*Setting home paragraph*/
 .home .content p{
@@ -245,7 +242,6 @@ img{
     justify-content: center;
     background: var(--black-color);
     padding: 0.5rem;
-    font-size: var(--title-text);
     overflow: hidden;
     transition: all 0.4s;
     color: var(--white-color);
@@ -254,12 +250,11 @@ img{
 }
 .home_scrollBox i {
     animation: scroll-down 2s infinite;
-    font-size: var(--title-text);
 }
 .scrollDown_text{
     display: none;
     color: var(--black-color);
-    font-size: var(--medium-text);
+    font-size: 0.8rem;
     font-weight: bold;
     margin-top: .5rem;
     margin-left: 1rem;
