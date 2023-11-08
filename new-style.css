@@ -40,7 +40,7 @@ body
 }
 img{
     width: 300px; /* Set the desired width */
-    object-fit: cover; /* Clip the image to cover the container */
+    /*object-fit: cover; !* Clip the image to cover the container *!*/
 }
 
 /*HEADER START*/
@@ -132,9 +132,12 @@ img{
     min-height:100vh;
     display:flex;
     align-items:center;
-    /*justify-content: center;*/
+    justify-content: center;
     flex-direction: column;
-    padding-top: 7rem;
+    /*padding-top: 7rem;*/
+    padding-bottom: 7rem;
+
+    /*background-color: #ff6535;*/
 
 }
 /*Setting up the image container at home*/
@@ -144,7 +147,7 @@ img{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-top: 4rem;
+    /*padding-top: 4rem;*/
     padding-right: 2.65rem;
 }
 .home-image .image{
@@ -189,7 +192,8 @@ img{
     order: -1;
     font-size: 1.8rem;
     font-weight: bold;
-    top: 0;
+    margin-top: 7rem;
+    margin-bottom: 22rem;
 }
 /*Setting home paragraph container*/
 .home .content{
@@ -198,12 +202,12 @@ img{
     justify-content: center;
     align-items: center;
     max-width: 26rem;
+
 }
 /*Setting home paragraph*/
 .home .content p{
     position: relative;
     font-size: 1rem;
-    margin-top: 23rem;
     word-spacing: 2.7px;
     text-align: center;
 }
@@ -229,6 +233,7 @@ img{
 .home_logo .logo:hover{
     color: var(--white-color);
 }
+/*Scroll button container*/
 .home_scroll{
     display: flex;
     align-items: center;
