@@ -62,7 +62,20 @@
     }
 /*PROJECT END*/
     /*---------------------------------------------------------------------*/
-
+    /*PRICE START*/
+    .pricing-col {
+        height: 20rem;
+    }
+    .pricing-col h3 {
+        font-size: 1.8rem;
+    }
+    .info_price p{
+        font-size: 1.2rem;
+    }
+    .see-more{
+        font-size: 1rem;
+    }
+    /*PRICE END*/
 
 }
 /*@media for laptop size*/
@@ -194,8 +207,7 @@
         justify-content: space-evenly;
         max-width: 85rem;
         width: 100%;
-        margin-top: 3.5rem;
-    }
+        }
     .aboutMeTitle{
         display: none;
     }
@@ -251,6 +263,26 @@
     }
     /*PROJECT END*/
     /*---------------------------------------------------------------------*/
+    /*PRICE START*/
+    .pricing {
+        max-width: 90rem;
+    }
+    .pricing-row {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .pricing-col h3 {
+        font-size: 1.8rem;
+    }
+    .info_price p{
+        font-size: 1.2rem;
+    }
+    .see-more{
+        font-size: 1rem;
+    }
+    /*PRICE END*/
+
+
 }
 
 
