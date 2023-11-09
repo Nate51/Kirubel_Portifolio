@@ -30,6 +30,8 @@
 @media (min-width: 1024px) {
     :root{
         --body-text-normal:1.1 ;
+        --title-text-normal:2.2rem ;
+
     }
     .mainSection{
         padding: 0 6rem;
@@ -108,13 +110,11 @@
         text-align: unset;
         margin-bottom: 4rem;
     }
-    .home .content p:after {
+    .home .content p:before {
         width: 10rem;
         height: 1.3rem;
         background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
         position: absolute;
-        left: 0rem;
-        top: 0;
         z-index: -2;
     }
     .home_logo {
@@ -145,12 +145,46 @@
     /*HOME END*/
     /*---------------------------------------------------------------------*/
 
+    /*ABOUT START*/
+    .about_container_2
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .aboutMeTitle{
+        display: none;
+    }
+    .content .aboutMeTitle{
+        display: flex;
+        margin-bottom: 2rem;
+        margin-left: -1.3rem;
+    }
+    .about-image .image{
+        max-width: 300px;
+    }
+    .about .content{
+        margin-left: 8rem;
+    }
+    .contact-button{
+        justify-content: left;
+    }
+    /*ABOUT END*/
+
+    /*---------------------------------------------------------------------*/
+
 
 }
+
+
+
 
 @media (min-width: 1224px) {
     :root{
         --body-text-normal: 1.25rem;
+        --title-text-normal: 2.7rem;
     }
     .mainSection{
         padding: 0 8rem;
@@ -174,7 +208,7 @@
         transition: 1s;
 
     }
-    .home .content p:after {
+    .home .content p:before {
         height: 1.6rem;
     }
     /*HOME END*/

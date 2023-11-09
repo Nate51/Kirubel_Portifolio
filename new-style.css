@@ -213,13 +213,12 @@ img{
     word-spacing: 2.7px;
     text-align: center;
 }
-.home .content p:after {
+.home .content p:before {
     content: '';
     width: 8rem;
     height: 1.3rem;
     background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
     position: absolute;
-    left: 0.6rem;
     top: 0;
     z-index: -2;
 }
@@ -289,6 +288,9 @@ img{
 .aboutMeTitle{
     font-size: var(--title-text-normal);
     margin-bottom: 5rem;
+}
+.content .aboutMeTitle{
+   display: none;
 }
 .about_container_2{
     display: flex;
