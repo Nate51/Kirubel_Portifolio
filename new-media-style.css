@@ -1,7 +1,11 @@
 /*@media for tablet size*/
 @media (min-width: 525px) {
-
+    :root{
+        --title-text-normal:2rem ;
+    }
+    /*HOME START*/
     .home .home-image .kirubelImage{
+
         width: 260px;
     }
     .home-image .home_arrow{
@@ -10,6 +14,12 @@
         width: 55px;
 
     }
+    .home .home_name {
+        font-size: 2rem;
+    }
+    /*HOME END*/
+    /*---------------------------------------------------------------------*/
+
     .about-image .image{
         max-width: 260px;
     }

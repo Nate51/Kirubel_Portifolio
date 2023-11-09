@@ -7,6 +7,8 @@
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsla(0, 0%, 83%, 0.84);
     --body-text-normal: 1rem;
+    --title-text-normal: 1.8rem;
+
 
 
 
@@ -275,7 +277,7 @@ img{
     min-height: 100vh;
 }
 .aboutMeTitle{
-    font-size: 1.8rem;
+    font-size: var(--title-text-normal);
     margin-bottom: 5rem;
 }
 .about_container_2{
