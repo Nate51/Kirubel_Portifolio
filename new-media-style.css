@@ -4,6 +4,8 @@
         --title-text-normal:2rem ;
     }
     /*HOME START*/
+    .home {
+    }
     .home .home-image .kirubelImage{
 
         width: 260px;
@@ -16,6 +18,7 @@
     }
     .home .home_name {
         font-size: 2rem;
+        margin-top: 5rem;
     }
     /*HOME END*/
     /*---------------------------------------------------------------------*/
@@ -80,6 +83,7 @@
         justify-content: space-evenly;
         padding-bottom: 0;
         padding-top: 2rem;
+        max-width: 85rem;
     }
     /*Setting home page name*/
     .home-image{
@@ -152,7 +156,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        max-width: 85rem;
         width: 100%;
+        margin-top: 3.5rem;
     }
     .aboutMeTitle{
         display: none;
@@ -192,7 +198,7 @@
     }
     /*HEADER START*/
     .header{
-        padding: 0 10rem;
+        padding: 0 8rem;
         transition: 1s;
     }
     /*HEADER END*/
@@ -214,4 +220,13 @@
     /*HOME END*/
     /*---------------------------------------------------------------------*/
 
+}
+@media (min-width: 1440px) {
+    /*HEADER START*/
+    .header{
+        padding: 0 11rem;
+        transition: 1s;
+    }
+    /*HEADER END*/
+    /*---------------------------------------------------------------------*/
 }

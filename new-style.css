@@ -42,6 +42,10 @@ body
 .mainSection{
     padding: 0 1.8rem;
     transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 img{
     width: 300px; /* Set the desired width */
@@ -139,6 +143,7 @@ img{
     align-items:center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
     /*padding-top: 7rem;*/
     padding-bottom: 7rem;
 
@@ -284,6 +289,8 @@ img{
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
+
 }
 .aboutMeTitle{
     font-size: var(--title-text-normal);
@@ -297,6 +304,8 @@ img{
     flex-direction:column ;
     justify-content: center;
     align-items: center;
+    width: 100%;
+
 }
 .about-image{
     background-color: #72b2d4;
