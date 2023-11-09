@@ -6,6 +6,7 @@
     --white-color: hsl(0, 0%, 95%);
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsla(0, 0%, 83%, 0.84);
+    --body-text-normal: 1rem;
 
 
 
@@ -21,6 +22,7 @@
     text-decoration:none;
     /*transition: .2s linear;*/
     object-fit: cover; /* Clip the image to cover the container */
+    transition: 0.2s;
 }
 /*Setting the html to hide the elements that go out side its bounds*/
 html {
@@ -36,7 +38,8 @@ body
 }
 /*Container for all the section*/
 .mainSection{
-    padding: 0 1rem;
+    padding: 0 1.8rem;
+    transition: 1s;
 }
 img{
     width: 300px; /* Set the desired width */
@@ -204,7 +207,7 @@ img{
 /*Setting home paragraph*/
 .home .content p{
     position: relative;
-    font-size: 1rem;
+    font-size: var(--body-text-normal);
     word-spacing: 2.7px;
     text-align: center;
 }
@@ -262,9 +265,89 @@ img{
 /*HOME END*/
 
 /*---------------------------------------------------------------------*/
+/*ABOUT START*/
+.about
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.aboutMeTitle{
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+}
+.about_container_2{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
+.about-image{
+    background-color: #72b2d4;
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: relative;
+}
+.about-image .image{
+    border: #f8f8f8 5px solid;
+    max-width: 210px;
+    z-index: 3;
+}
+.about-image .random-lines{
+    position: absolute;
+    width: 3.5rem;
+    filter: invert();
+    right: -2rem;
+    z-index: 1;
+    /*left: 1rem;*/
+}
+.about-image .geometric-box{
+    z-index: 3;
+    right: -3rem;
+    top: 4rem;
+}
+.about-image .aboutShadow{
+position: absolute;
+    height: 130%;
+    width: 12rem;
+    right: -4rem;
+    background-color: #eae9e9;
+    border-bottom: 4px solid var(--first-color);
+    z-index: 0;
 
+}
+.about_container_2 .content {
+    max-width: 40rem;
+}
+.about_container_2 .content p{
+    font-size: var(--body-text-normal);
+    margin-bottom: 2rem;
 
-
+}
+.about .content ul li span{
+    font-weight: bold;
+}
+.contact-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+.contact-button .button{
+    display: flex;
+    background-color: black;
+    color: #efefef;
+    gap: 0.5rem;
+    padding: 16px 20px;
+}
+/*ABOUT END*/
+/*---------------------------------------------------------------------*/
 
 
 
