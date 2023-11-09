@@ -130,6 +130,9 @@ img{
 .effect::before{
     width: 70%;
 }
+.section-title{
+    font-size: var(--title-text-normal);
+}
 /*HEADER END*/
 
 /*---------------------------------------------------------------------*/
@@ -195,7 +198,7 @@ img{
 /*Setting home page name*/
 .home_name{
     order: -1;
-    font-size: 1.8rem;
+    font-size: var(--title-text-normal);
     font-weight: bold;
     margin-top: 7rem;
     /*margin-bottom: 22rem;*/
@@ -224,8 +227,8 @@ img{
     height: 1.3rem;
     background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
     position: absolute;
-    top: 0;
     z-index: -2;
+    margin-left: -0.1rem;
 }
 /*Icons container beside the image*/
 .home_logo {
@@ -381,8 +384,92 @@ position: absolute;
 }
 /*ABOUT END*/
 /*---------------------------------------------------------------------*/
+/*PROJECT START*/
+#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    margin-top: 4rem;
 
+}
 
+#projects .content{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: auto;
+
+}
+
+.project-container{
+    /*background-color: rgba(255, 255, 255, 0.27);*/
+    padding: 15px;
+    padding-bottom: 30px;
+    position: relative;
+
+}
+.project-container:hover{
+    background-color: rgba(255, 255, 255, 0.65);
+}
+.project-container img{
+    width: 100%;
+    max-height: 200px;
+    max-width: 600px;
+    object-fit: cover;
+    object-position: top right;
+}
+.project-container .link-button{
+    right: 2rem;
+    top: 11.7rem;
+    position: absolute;
+    background-color: rgb(38, 37, 37);
+    padding: 15px 18px;
+    color: white;
+    font-size: 1rem;
+}
+.project-container .link-button:hover {
+    background-color: rgb(0, 0, 0);
+
+}
+
+.project-container .project-information{
+    margin-top: 15px;
+    max-width: 400px;
+    /*background-color: #ff6535;*/
+}
+.project-container .project-information .title{
+    font-size: 1.2rem;
+}
+.project-container .hired-by-name{
+    font-size: 0.8rem ;
+}
+.project-container .project-information .description{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #4f4e4e;
+}
+.project-container .other-links{
+    /*background-color: #ff6535;*/
+    margin-top: 0.6rem;
+}
+.other-links .logo{
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.69);
+}
+.other-links .logo:hover{
+    color: rgb(0, 0, 0);
+}
+.other-links .logo::after{
+    content: " View";
+    font-size: 0.9rem;
+    float: revert;
+}
+
+/*PROJECT END*/
 
 
 

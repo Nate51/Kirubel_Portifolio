@@ -22,11 +22,47 @@
     }
     /*HOME END*/
     /*---------------------------------------------------------------------*/
-
+    /*ABOUT START*/
     .about-image .image{
         max-width: 260px;
     }
+    /*ABOUT END*/
     /*---------------------------------------------------------------------*/
+/*PROJECT START*/
+    .project-container img{
+        max-height: 280px;
+    }
+    .project-container .project-information{
+        max-width: 600px;
+    }
+
+    .project-container .project-information .title{
+        font-size: 1.4rem;
+    }
+    .project-container .link-button{
+        top: 16.7rem;
+    }
+    .project-container .hired-by-name{
+        font-size: 1rem ;
+    }
+    .project-container .project-information .description{
+        font-size: 1.1rem;
+    }
+
+    .other-links .logo{
+        font-size: 1.1rem;
+    }
+    .other-links .logo:hover{
+        color: rgb(0, 0, 0);
+    }
+    .other-links .logo::after{
+        content: " View";
+        font-size: 1.1rem;
+        float: revert;
+    }
+/*PROJECT END*/
+    /*---------------------------------------------------------------------*/
+
 
 }
 /*@media for laptop size*/
@@ -95,7 +131,7 @@
     }
     .home .home_name{
         display: none;
-        font-size: 2.2rem;
+        font-size: var(--title-text-normal);
         transition: 1s;
     }
     .home .content .home_name{
@@ -112,7 +148,7 @@
     .home .content p{
         transition: 1s;
         text-align: unset;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
     .home .content p:before {
         width: 10rem;
@@ -140,12 +176,12 @@
 
 
     }
-.home_scrollBox i {
+    .home_scrollBox i {
     font-size: 1.6rem;
-}
-.scrollDown_text {
+    }
+    .scrollDown_text {
     display: flex;
-}
+    }
     /*HOME END*/
     /*---------------------------------------------------------------------*/
 
@@ -181,7 +217,40 @@
 
     /*---------------------------------------------------------------------*/
 
+    /*PROJECT START*/
+    .project-container img{
+        max-height: 240px;
+    }
+    .project-container .project-information{
+        width: 380px;
+    }
 
+    .project-container .project-information .title{
+        font-size: 1.3rem;
+    }
+    .project-container .link-button{
+        top: 14.4rem;
+    }
+    .project-container .hired-by-name{
+        font-size: 0.9rem ;
+    }
+    .project-container .project-information .description{
+        font-size: 1rem;
+    }
+
+    .other-links .logo{
+        font-size: 1rem;
+    }
+    .other-links .logo:hover{
+        color: rgb(0, 0, 0);
+    }
+    .other-links .logo::after{
+        content: " View";
+        font-size: 1rem;
+        float: revert;
+    }
+    /*PROJECT END*/
+    /*---------------------------------------------------------------------*/
 }
 
 
@@ -207,7 +276,7 @@
     /*HOME START*/
     .home .home_name{
         display: none;
-        font-size: 2.7rem;
+        font-size: var(--title-text-normal);
         transition: 1s;
     }
     .home .content p{
