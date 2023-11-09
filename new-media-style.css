@@ -108,6 +108,15 @@
         text-align: unset;
         margin-bottom: 4rem;
     }
+    .home .content p:after {
+        width: 10rem;
+        height: 1.3rem;
+        background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
+        position: absolute;
+        left: 0rem;
+        top: 0;
+        z-index: -2;
+    }
     .home_logo {
         order: 1;
         margin-left: 3rem;
@@ -164,6 +173,9 @@
     .home .content p{
         transition: 1s;
 
+    }
+    .home .content p:after {
+        height: 1.6rem;
     }
     /*HOME END*/
     /*---------------------------------------------------------------------*/

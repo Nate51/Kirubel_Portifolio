@@ -69,7 +69,7 @@ img{
 /*Setting up the nav bars container*/
 .header .navbar{
     position: absolute;
-    top: 3.3rem;
+    top: 3rem;
     left: 0;
     right: 0;
     background: var(--container-color);
@@ -213,6 +213,16 @@ img{
     word-spacing: 2.7px;
     text-align: center;
 }
+.home .content p:after {
+    content: '';
+    width: 8rem;
+    height: 1.3rem;
+    background: linear-gradient(to right, rgba(252, 61, 3, 0.57), transparent);
+    position: absolute;
+    left: 0.6rem;
+    top: 0;
+    z-index: -2;
+}
 /*Icons container beside the image*/
 .home_logo {
     display: flex;
@@ -329,7 +339,17 @@ position: absolute;
 .about_container_2 .content p{
     font-size: var(--body-text-normal);
     margin-bottom: 2rem;
+    position: relative;
 
+}
+.about_container_2 .content p:after {
+    content: '';
+    width: 14px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    left: -1.3rem;
+    top: 0.7rem;
 }
 .about .content ul li span{
     font-weight: bold;
