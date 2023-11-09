@@ -1,35 +1,21 @@
 /*@media for tablet size*/
-/*@media (min-width: 425px) {
-    !*HEADER START*!
-    .header{
-        padding: 0 1.6rem;
-        transition: 1s;
-    }
-    !*Setting up the logo "Kirubel T"*!
-    .header .logo {
-        font-size: 1.6rem;
-    }
-    !*Setting up the drop down button*!
-    #menu_btn{
-        font-size: 2.8rem;
-    }
-    !*Setting up the nav bars container*!
-    .header .navbar {
-        top: 3.7rem;
-    }
-    !*Setting up the nav bars buttons*!
-    .header .navbar a{
-        font-size: 1.4rem;
-    }
-    !*Is the animation for the drop down*!
-    .navbar.active {
-        height: 30rem;
-    }
-    !*HEADER END*!
+@media (min-width: 525px) {
 
-    !*---------------------------------------------------------------------*!
+    .home .home-image .kirubelImage{
+        width: 260px;
+    }
+    .home-image .home_arrow{
+        top: 23.8rem;
+        left: 8rem;
+        width: 55px;
 
-}*/
+    }
+    .about-image .image{
+        max-width: 260px;
+    }
+    /*---------------------------------------------------------------------*/
+
+}
 /*@media for laptop size*/
 @media (min-width: 1024px) {
     :root{
